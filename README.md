@@ -1,10 +1,13 @@
 # vapor_ubuntu_20_04
 
+
+Helper links:
+Swift releases: https://swift.org/download/#releases
+https://www.swift.org/install/linux/#installation-via-tarball
+
+
 # Install Vapor Server on Ubuntu (nginx, supervisor)
 How To Install Vapor Server on Ubuntu 20.04 (root)
-
-
-> **step 1**
 
 ```
 sudo apt-get update
@@ -35,47 +38,49 @@ wget https://download.swift.org/swift-5.9-release/ubuntu2004/swift-5.9-RELEASE/s
 tar xzf swift-5.9-RELEASE-ubuntu20.04.tar.gz
 ```
 
-# 3 Add the Swift binaries to path
+Add the Swift binaries to path
 ```
 mcedit ~/.bashrc
 ```
 
-# 4 Copy and save in your .bashrc file
+Copy and save in your .bashrc file
 ```
 export PATH=/home/<profile-name>/swift-5.9-RELEASE-ubuntu20.04/usr/bin:”${PATH}”
 ```
 
-# 5 In your ssh terminal
+In your ssh terminal
 ```
 source ~/.bashrc
 ```
-# 6 Check that swift is installed (optional)
+Check that swift is installed (optional)
 ```
 swift --version
 ```
 
-# 1
+
+
+# Vapor toolbox
 ```
 git clone https://github.com/vapor/toolbox.git
 ```
-# 2
+
 ```
 cd toolbox
 ```
-# 3
+
 ```
 git checkout 18.7.4
 ```
-# 4
+
 ```
 swift build -c release --disable-sandbox
 ```
-# 5
+
 ```
 sudo mv .build/release/vapor /usr/local/bin
 ```
 
-> **step 3**
+
 # Create/Build/Run serve a project
 ```
 mkdir /home/<profile-name>/projects
@@ -118,9 +123,9 @@ Setup the configuration by editing your server name and the root path :
 # Default server configuration
 #
 server {
-    server_name hello.com;     
+    server_name sample-server-name.com; #     
     listen 80;
-    root /home/vapor/Hello/Public/;
+    root /home/<profile-name>/projects/VaporHelloWorldApp/Public/; #fix path
 # Serve all public/static files via nginx and then fallback to   Vapor for the rest
     location / {
         try_files $uri @proxy;
@@ -137,5 +142,48 @@ location @proxy {
     }
 }
 ```
+```
+systemctl restart nginx
+systemctl status nginx
+```
+
+
+# Install and setup Supervisor
+
+```
+apt-get install supervisor
+```
+
+configfile
+```
+sh -c 'echo_supervisord_conf > /etc/supervisor/supervisord.conf'
+```
+
+reboot server 
+
+
+```
+mcedit /etc/supervisor/supervisord.conf
+```
+add 
+```
+[program:VaporHelloWorldApp]
+command=/home/<profile-name>/projects/VaporHelloWorldApp/.build/release/App serve --env prod
+directory=/home/<profile-name>/projects/VaporHelloWorldApp/
+user=vapor
+stdout_logfile=/var/log/supervisor/%(program_name)-stdout.log
+stderr_logfile=/var/log/supervisor/%(program_name)-stderr.log
+```
+
+```
+supervisorctl reread
+supervisorctl update
+```
+
+ 
+Open http://<your_domain_or_ip> in your browser, it should show the message “It`s work”.
+
+
+The end
 
 
