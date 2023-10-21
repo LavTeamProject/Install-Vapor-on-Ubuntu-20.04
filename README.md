@@ -189,3 +189,10 @@ Open http://<your_domain_or_ip> in your browser, it should show the message “I
 The end
 
 
+
+
+
+PS
+Disabling CDROM Source: ```mcedit /etc/apt/sources.list```
+
+
