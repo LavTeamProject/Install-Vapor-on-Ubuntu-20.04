@@ -187,7 +187,7 @@ reboot server
 ```
 reboot 
 ```
-And open http://<your_domain_or_ip> in your browser, it should show the message “It`s work”.
+And open http://<your_domain_or_ip> in your browser, it should show the message “It works!”.
 
 
 The end
