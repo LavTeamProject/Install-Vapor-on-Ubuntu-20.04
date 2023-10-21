@@ -183,9 +183,11 @@ stderr_logfile=/var/log/supervisor/%(program_name)-stderr.log
 supervisorctl reread
 supervisorctl update
 ```
-
- 
-Open http://<your_domain_or_ip> in your browser, it should show the message “It`s work”.
+reboot server 
+```
+reboot 
+```
+And open http://<your_domain_or_ip> in your browser, it should show the message “It`s work”.
 
 
 The end
