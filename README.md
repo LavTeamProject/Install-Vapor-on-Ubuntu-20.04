@@ -162,7 +162,9 @@ sh -c 'echo_supervisord_conf > /etc/supervisor/supervisord.conf'
 ```
 
 reboot server 
-
+```
+reboot 
+```
 
 ```
 mcedit /etc/supervisor/supervisord.conf
