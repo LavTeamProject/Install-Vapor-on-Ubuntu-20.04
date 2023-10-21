@@ -100,31 +100,42 @@ swift run -c release
 
 
 # Install nginx
+
+The first step is to install Nginx on your server. Connect to your server with ssh and run these commands :
 ```
-apt-get install nginx
+sudo apt-get update
+sudo apt-get install nginx
 ```
 
+Once Nginx is installed, run this command to configure Nginx for your application :
+```
+mcedit /etc/nginx/sites-enabled/default
+```
 
+Setup the configuration by editing your server name and the root path :
 
+```
+# Default server configuration
+#
+server {
+    server_name hello.com;     
+    listen 80;
+    root /home/vapor/Hello/Public/;
+# Serve all public/static files via nginx and then fallback to   Vapor for the rest
+    location / {
+        try_files $uri @proxy;
+    }
+location @proxy {
+        proxy_pass http://127.0.0.1:8080;
+        proxy_pass_header Server;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_pass_header Server;
+        proxy_connect_timeout 3s;
+        proxy_read_timeout 10s;
+    }
+}
+```
 
-
-
-> **step 1**
-
-
-> **step 2**
-
-```chmod 777 easy-install.sh```
-
-> **step 3**
-
-```./easy-install.sh```
-
-# One-Click Installation
-
-``` wget -qO easy-install.sh https://goo.gl/MqHjBy && chmod u+x easy-install.sh && bash easy-install.sh```
-
-Here is the video tutorial
-
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/4ftVtxVkXuw/0.jpg)](https://www.youtube.com/watch?v=4ftVtxVkXuw)
 
