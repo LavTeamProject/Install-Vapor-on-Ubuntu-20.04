@@ -2,7 +2,9 @@
 
 
 Helper links:
+
 Swift releases: https://swift.org/download/#releases
+
 https://www.swift.org/install/linux/#installation-via-tarball
 
 
