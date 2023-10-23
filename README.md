@@ -190,6 +190,84 @@ reboot
 And open http://<your_domain_or_ip> in your browser, it should show the message “It works!”.
 
 
+# Installing and configuring PostgreSQL
+
+
+1) Update the repository lists:
+
+```
+sudo apt-get update
+``` 
+
+2) Download the PostgreSQL repository key
+```
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc |  apt-key add -
+apt-add-repository "deb http://apt.postgresql.org/pub/repos/apt/bionic-pgdg main"
+apt-cache search postgresql | grep "SQL database, version"
+``` 
+
+3) Install the latest version
+```
+apt-get install postgresql
+``` 
+
+
+```
+sudo su - postgres
+``` 
+
+4) Check your database connection
+```
+sudo su - postgres
+psql
+``` 
+
+```
+postgres=# \l
+postgres=# \q
+``` 
+
+a) Create a database mybase
+```
+sudo su - postgres
+psql
+``` 
+
+```
+postgres=# create database mybase;
+```
+
+```CREATE DATABASE```
+
+
+```
+postgres=# create database mybase;
+```
+
+```CREATE DATABASE```
+
+b) Create user myuser with password mypass:
+
+```
+postgres=# create user myuser with encrypted password 'mypass';
+```
+```CREATE ROLE```
+
+c) Give the user permissions to access the mybase database:
+
+
+```
+postgres=# grant all privileges on database mybase to myuser;
+```
+```GRANT ``` 
+```
+postgres=# \q
+```
+d) Check the connection with Ubuntu OS user rights:
+
+```
+psql -hlocalhost -Umyuser -W mybase
+```
 
 
 
