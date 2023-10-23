@@ -190,6 +190,10 @@ reboot
 And open http://<your_domain_or_ip> in your browser, it should show the message “It works!”.
 
 
+
+
+
+
 The end
 
 
@@ -197,6 +201,13 @@ The end
 
 
 PS
-Disabling CDROM Source: ```mcedit /etc/apt/sources.list```
+1) Disabling CDROM Source: ```mcedit /etc/apt/sources.list```
 
+2) Ubuntu 20.04 ssh root login enable
+``` sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config```
+``` $ sudo systemctl restart ssh ``` 
+
+we need to set root’s password
+
+```  sudo passwd  ``` 
 
