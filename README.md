@@ -204,10 +204,16 @@ PS
 1) Disabling CDROM Source: ```mcedit /etc/apt/sources.list```
 
 2) Ubuntu 20.04 ssh root login enable
-``` sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config```
-``` $ sudo systemctl restart ssh ``` 
+```
+sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+```
+``` 
+$ sudo systemctl restart ssh
+``` 
 
 we need to set root’s password
 
-```  sudo passwd  ``` 
+```  
+sudo passwd
+ ``` 
 
