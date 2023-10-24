@@ -209,7 +209,7 @@ apt-get install postgresql
 ```
 sudo su - postgres
 ``` 
-
+``` reboot ```
 3) Check your database connection
 ```
 sudo su - postgres
