@@ -199,7 +199,7 @@ And open http://<your_domain_or_ip> in your browser, it should show the message 
 sudo apt-get update
 ``` 
 
-2) Download the PostgreSQL repository key
+-2) Download the PostgreSQL repository key-
 ```
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc |  apt-key add -
 apt-add-repository "deb http://apt.postgresql.org/pub/repos/apt/bionic-pgdg main"
