@@ -199,14 +199,8 @@ And open http://<your_domain_or_ip> in your browser, it should show the message 
 sudo apt-get update
 ``` 
 
--2) Download the PostgreSQL repository key-
-```
-wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc |  apt-key add -
-apt-add-repository "deb http://apt.postgresql.org/pub/repos/apt/bionic-pgdg main"
-apt-cache search postgresql | grep "SQL database, version"
-``` 
 
-3) Install the latest version
+2) Install the latest version
 ```
 apt-get install postgresql
 ``` 
@@ -216,7 +210,7 @@ apt-get install postgresql
 sudo su - postgres
 ``` 
 
-4) Check your database connection
+3) Check your database connection
 ```
 sudo su - postgres
 psql
