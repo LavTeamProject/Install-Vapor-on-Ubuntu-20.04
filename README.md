@@ -269,7 +269,13 @@ d) Check the connection with Ubuntu OS user rights:
 psql -hlocalhost -Umyuser -W mybase
 ```
 
+# Installing CertBot
 
+
+curl -o- https://raw.githubusercontent.com/vinyll/certbot-install/master/install.sh | bash
+
+
+sudo certbot --installer nginx -d lavteam.ddns.net
 
 
 The end
