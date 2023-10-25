@@ -279,9 +279,9 @@ The end
 
 
 PS
-1) Disabling CDROM Source: ```mcedit /etc/apt/sources.list```
+# 1) Disabling CDROM Source: ```mcedit /etc/apt/sources.list```
 
-2) Ubuntu 20.04 ssh root login enable
+# 2) Ubuntu 20.04 ssh root login enable
 ```
 sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 ```
@@ -295,3 +295,15 @@ we need to set root’s password
 sudo passwd
  ``` 
 
+
+# 3) DB Allow Remote Connection 
+mcedit /etc/postgresql/12/main/postgresql.conf
+ ``` 
+listen_addresses = '*'
+ ``` 
+
+ ``` 
+  mcedit /etc/postgresql/12/main/pg_hba.conf
+ ``` 
+ ```  host    all             all              0.0.0.0/0                       md5 ``` 
+ ``` host    all             all              ::/0                            md5 ``` 
