@@ -1,0 +1,990 @@
+# Laravel: Добавление функциональности для работы с картами, категориями и MCC кодами
+
+## Шаг 1: Создание миграций
+
+### Команды для создания миграций
+```bash
+php artisan make:migration create_banks_table
+php artisan make:migration create_cards_table
+php artisan make:migration create_categories_table
+php artisan make:migration create_mcc_codes_table
+php artisan make:migration create_category_mcc_table
+```
+
+### Код для миграций
+
+#### `create_banks_table.php`
+```php
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateBanksTable extends Migration
+{
+    public function up()
+    {
+        Schema::create('banks', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('code');
+            $table->string('license')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('banks');
+    }
+}
+```
+
+#### `create_cards_table.php`
+```php
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateCardsTable extends Migration
+{
+    public function up()
+    {
+        Schema::create('cards', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('bank_id');
+            $table->string('name');
+            $table->string('type');
+            $table->string('code');
+            $table->boolean('allows_category_selection')->default(false);
+            $table->text('cashback')->nullable();
+            $table->integer('cashback_limit_user')->nullable();
+            $table->integer('cashback_limit_premium')->nullable();
+            $table->string('rounding')->nullable();
+            $table->text('conditions')->nullable();
+            $table->timestamps();
+
+            $table->foreign('bank_id')->references('id')->on('banks')->onDelete('cascade');
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('cards');
+    }
+}
+```
+
+#### `create_categories_table.php`
+```php
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateCategoriesTable extends Migration
+{
+    public function up()
+    {
+        Schema::create('categories', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('card_id');
+            $table->string('title');
+            $table->string('icon_url')->nullable();
+            $table->decimal('min_cashback_percent', 5, 2)->nullable();
+            $table->decimal('max_cashback_percent', 5, 2)->nullable();
+            $table->timestamps();
+
+            $table->foreign('card_id')->references('id')->on('cards')->onDelete('cascade');
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('categories');
+    }
+}
+```
+
+#### `create_mcc_codes_table.php`
+```php
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateMccCodesTable extends Migration
+{
+    public function up()
+    {
+        Schema::create('mcc_codes', function (Blueprint $table) {
+            $table->id();
+            $table->string('code');
+            $table->string('description')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('mcc_codes');
+    }
+}
+```
+
+#### `create_category_mcc_table.php`
+```php
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateCategoryMccTable extends Migration
+{
+    public function up()
+    {
+        Schema::create('category_mcc', function (Blueprint $table) {
+            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('mcc_code_id');
+            $table->timestamps();
+
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreign('mcc_code_id')->references('id')->on('mcc_codes')->onDelete('cascade');
+            $table->primary(['category_id', 'mcc_code_id']);
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('category_mcc');
+    }
+}
+```
+
+### Применение миграций
+```bash
+php artisan migrate
+```
+
+---
+
+## Шаг 2: Создание моделей
+
+### Команды для создания моделей
+```bash
+php artisan make:model Bank -m
+php artisan make:model Card -m
+php artisan make:model Category -m
+php artisan make:model MccCode -m
+```
+
+### Код моделей
+
+#### Модель `Bank`
+```php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Bank extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['name', 'license'];
+
+    public function cards()
+    {
+        return $this->hasMany(Card::class);
+    }
+}
+```
+
+#### Модель `Card`
+```php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Card extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['bank_id', 'type', 'cashback', 'cashback_limit_user', 'cashback_limit_premium', 'rounding', 'conditions'];
+
+    public function bank()
+    {
+        return $this->belongsTo(Bank::class);
+    }
+
+    public function categories()
+    {
+        return $this->hasMany(Category::class);
+    }
+}
+```
+
+#### Модель `Category`
+```php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Category extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['card_id', 'title', 'icon_url', 'min_cashback_percent', 'max_cashback_percent'];
+
+    public function card()
+    {
+        return $this->belongsTo(Card::class);
+    }
+
+    public function mccCodes()
+    {
+        return $this->belongsToMany(MccCode::class, 'category_mcc');
+    }
+}
+```
+
+#### Модель `MccCode`
+```php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class MccCode extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['code', 'description'];
+
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class, 'category_mcc');
+    }
+}
+```
+
+---
+
+## Шаг 3: Создание ресурсов
+
+### Команды для создания ресурсов
+```bash
+php artisan make:resource CardResource
+php artisan make:resource CategoryResource
+php artisan make:resource MccCodeResource
+```
+
+### Код ресурсов
+
+#### `CardResource`
+```php
+namespace App\Http\Resources;
+
+use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\JsonResource;
+
+class CardResource extends JsonResource
+{
+    public function toArray($request)
+    {
+        return [
+            'id' => $this->id,
+            'type' => $this->type,
+            'name' => $this->name,
+            'allows_category_selection' => $this->allows_category_selection,
+            'cashback' => $this->cashback,
+            'cashback_limit_user' => $this->cashback_limit_user,
+            'cashback_limit_premium' => $this->cashback_limit_premium,
+            'rounding' => $this->rounding,
+            'conditions' => $this->conditions,
+            'categories' => CategoryResource::collection($this->categories),
+        ];
+    }
+}
+```
+
+#### `CategoryResource`
+```php
+namespace App\Http\Resources;
+
+use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\JsonResource;
+
+class CategoryResource extends JsonResource
+{
+    public function toArray($request)
+    {
+        return [
+            'id' => $this->id,
+            'title' => $this->title,
+            'icon_url' => $this->icon_url,
+            'min_cashback_percent' => $this->min_cashback_percent,
+            'max_cashback_percent' => $this->max_cashback_percent,
+            'mcc_codes' => MccCodeResource::collection($this->mccCodes),
+        ];
+    }
+}
+```
+
+#### `MccCodeResource`
+```php
+namespace App\Http\Resources;
+
+use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\JsonResource;
+
+class MccCodeResource extends JsonResource
+{
+    public function toArray($request)
+    {
+        return [
+            'code' => $this->code,
+            'description' => $this->description,
+        ];
+    }
+}
+```
+
+---
+
+## Шаг 4: Создание контроллера и маршрутов
+
+### Команда для создания контроллера
+```bash
+php artisan make:controller CardController
+```
+
+### Код контроллера
+
+#### `CardController`
+```php
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Http\Resources\CardResource;
+use App\Http\Resources\CategoryResource;
+use App\Models\Card;
+use App\Models\Category;
+use App\Models\MccCode;
+use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
+use Illuminate\Database\QueryException;
+
+use Illuminate\Validation\Rule;
+
+class CardController extends Controller
+{
+    public function index()
+    {
+        return CardResource::collection(Card::with('categories.mccCodes')->get());
+    }
+
+    public function getByMccCode($mcc)
+    {
+        $cards = Card::whereHas('categories.mccCodes', function ($query) use ($mcc) {
+            $query->where('code', $mcc);
+        })->with(['categories' => function ($query) use ($mcc) {
+            $query->whereHas('mccCodes', function ($subQuery) use ($mcc) {
+                $subQuery->where('code', $mcc);
+            });
+        }])->get();
+
+        return CardResource::collection($cards);
+    }
+
+    public function show(Card $card)
+    {
+        return new CardResource($card->load('categories.mccCodes'));
+    }
+    
+    public function storeCategory(Request $request, Card $card)
+    {
+         try {
+        $validated = $request->validate([
+            'title' => [
+                'required',
+                'string',
+                'max:255',
+                Rule::unique('categories')->where(function ($query) use ($card) {
+                    return $query->where('card_id', $card->id);
+                })
+            ],
+            'icon_url' => 'nullable|url',
+            'min_cashback_percent' => 'nullable|numeric|min:0',
+            'max_cashback_percent' => 'nullable|numeric|min:0',
+        ], [
+            // Сообщение об ошибке для поля title
+            'title.unique' => 'The title has already been taken for this card.',
+            'title.required' => 'The category title is required.',
+            'title.string' => 'The category title must be a string.',
+            'title.max' => 'The category title must not exceed 255 characters.',
+        ]);
+
+        $category = $card->categories()->create($validated);
+
+        return response()->json([
+            'message' => 'Category created successfully.',
+            'category' => $category,
+        ], 201);
+        
+    } catch (ValidationException $e) {
+            return response()->json([
+            'errors' => $e->errors(), // Возвращаем массив ошибок
+            ], 400);
+    }
+    }
+    
+    
+    
+    public function addMccCodes(Request $request, Category $category)
+    {
+        
+    try {
+        $validated = $request->validate([
+            'mcc_code_ids' => 'required|array',
+            'mcc_code_ids.*' => 'exists:mcc_codes,code',
+        ]);
+        
+        $validMccCodes = MccCode::whereIn('code', $validated['mcc_code_ids'])->pluck('id')->toArray();
+
+        $category->mccCodes()->syncWithoutDetaching($validMccCodes);
+
+        return response()->json([
+            'message' => 'MCC codes added to category successfully.',
+            'category' => new CategoryResource($category->load('mccCodes')),
+        ]);
+
+    } catch (ValidationException $e) {
+            return response()->json([
+                'error' => 'Переданы не валидные MCC'
+            ], 400);
+    }
+    }
+    
+
+public function storeCategoriesWithMccCodes(Request $request, Card $card)
+{
+    try {
+        // Валидация запроса
+        $validated = $request->validate([
+            'categories' => 'required|array',
+            'categories.*.title' => [
+                'required',
+                'string',
+                'max:255',
+                Rule::unique('categories')->where(function ($query) use ($card) {
+                    return $query->where('card_id', $card->id);
+                })
+            ],
+            'categories.*.icon_url' => 'nullable|url',
+            'categories.*.min_cashback_percent' => 'nullable|numeric|min:0',
+            'categories.*.max_cashback_percent' => 'nullable|numeric|min:0',
+            'categories.*.mcc_code_ids' => 'required|array',
+            'categories.*.mcc_code_ids.*' => 'exists:mcc_codes,code',
+        ], [
+            // Сообщение об ошибке для поля title
+            'categories.*.title.unique' => 'The title has already been taken for this card.',
+            'categories.*.title.required' => 'The category title is required.',
+            'categories.*.title.string' => 'The category title must be a string.',
+            'categories.*.title.max' => 'The category title must not exceed 255 characters.',
+        ]);
+
+        // Массив для хранения созданных категорий
+        $createdCategories = [];
+
+        foreach ($validated['categories'] as $categoryData) {
+            // Создание категории
+            $category = $card->categories()->create([
+                'title' => $categoryData['title'],
+                'icon_url' => $categoryData['icon_url'] ?? '',
+                'min_cashback_percent' => $categoryData['min_cashback_percent'],
+                'max_cashback_percent' => $categoryData['max_cashback_percent'],
+            ]);
+
+            // Получение MCC кодов
+            $validMccCodes = MccCode::whereIn('code', $categoryData['mcc_code_ids'])->pluck('id')->toArray();
+
+            // Привязка MCC кодов к категории
+            $category->mccCodes()->syncWithoutDetaching($validMccCodes);
+
+            // Добавление категории в массив ответа
+            $createdCategories[] = new CategoryResource($category->load('mccCodes'));
+        }
+
+        return response()->json([
+            'message' => 'Categories and MCC codes created successfully.',
+            'categories' => $createdCategories,
+        ], 201);
+
+    } catch (ValidationException $e) {
+        // Обработка ошибок валидации
+        return response()->json([
+            'errors' => $e->errors(), // Возвращаем массив ошибок
+        ], 422);
+
+    } catch (QueryException $e) {
+        // Обработка ошибок запросов к базе данных
+        return response()->json([
+            'error' => 'Database error: ' . $e->getMessage(),
+        ], 500);
+
+    } catch (\Exception $e) {
+        // Обработка всех других исключений
+        return response()->json([
+            'error' => 'An unexpected error occurred: ' . $e->getMessage(),
+        ], 500);
+    }
+}
+
+}
+```
+
+### Маршруты в `routes/api.php`
+```php
+use App\Http\Controllers\CardController;
+
+Route::get('/cards', [CardController::class, 'index']);
+Route::get('/cards/mcc/{mcc}', [CardController::class, 'getByMccCode']);
+Route::get('/cards/{card}', [CardController::class, 'show']);
+Route::post('/cards/{card}/categories', [CardController::class, 'storeCategory']);
+Route::post('/categories/{category}/mcc', [CardController::class, 'addMccCodes']);
+Route::post('/cards/{card}/storeCategoriesWithMccCodes', [CardController::class, 'storeCategoriesWithMccCodes'])
+
+```
+
+---
+
+## Шаг 5: Запуск и проверка
+
+1. Запустите сервер разработки:
+   ```bash
+   php artisan serve
+   ```
+2. Проверьте:
+   - Список карт: `http://localhost:8000/api/cards`
+   - Карты по MCC: `http://localhost:8000/api/cards/mcc/{mcc}`
+   - Информация о карте: `http://localhost:8000/api/cards/{card}`
+   - Добавить категорию к карте: `http://localhost:8000/api/cards/{card}/categories`
+```curl
+curl --location 'http://mcc-codes.lantic.ru/api/cards/1/categories' \
+--header 'Content-Type: application/json' \
+--data '{
+            "title": "no_casbback",
+            "icon_url": "https://sample.com",
+            "min_cashback_percent": 0,
+            "max_cashback_percent": 0
+         }'
+```
+   - Добавить MCC к категории: `http://localhost:8000/api/categories/{category}/mcc`
+```curl
+curl --location 'http://mcc-codes.lantic.ru/api/categories/4/mcc' \
+--header 'Content-Type: application/json' \
+--data '{
+    "mcc_code_ids": ["1000"]
+}'
+```
+
+   - Добавить категории c MCC к карте: `http://localhost:8000/api/cards/{card}/storeCategoriesWithMccCodes`
+```curl
+curl -X POST "http://localhost:8000/api/cards/{card}/storeCategoriesWithMccCodes" \
+-H "Content-Type: application/json" \
+-d '{
+    "categories": [
+        {
+            "title": "Shopping",
+            "icon_url": "https://example.com/icon.png",
+            "min_cashback_percent": 1,
+            "max_cashback_percent": 5,
+            "mcc_code_ids": ["5411", "5812"]
+        },
+        {
+            "title": "Fuel",
+            "min_cashback_percent": 2,
+            "max_cashback_percent": 7,
+            "mcc_code_ids": ["5541", "5983"]
+        }
+    ]
+}'
+
+```
+
+
+
+Готово! 🚀
+
+
+
+
+
+# Управление категориями кешбэка с идентификатором пользователя
+
+Этот документ описывает шаги для создания миграций, моделей, контроллеров, ресурсов и примеров запросов для управления категориями кешбэка с идентификатором пользователя.
+
+## Шаг 1: Создание миграции для таблицы `user_category_cashback`
+
+```bash
+php artisan make:migration create_user_category_cashback_table
+```
+
+Пример содержимого файла миграции:
+
+```php
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateUserCategoryCashbackTable extends Migration
+{
+    public function up()
+    {
+        Schema::create('user_category_cashback', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('user_identifier'); // Идентификатор пользователя
+            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('card_id');
+            $table->decimal('cashback_percent', 5, 2);
+            $table->unsignedSmallInteger('month');
+            $table->unsignedSmallInteger('year');
+            $table->timestamps();
+
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreign('card_id')->references('id')->on('cards')->onDelete('cascade');
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('user_category_cashback');
+    }
+}
+```
+
+Примените миграцию:
+
+```bash
+php artisan migrate
+```
+
+## Шаг 2: Создание модели
+
+```bash
+php artisan make:model UserCategoryCashback
+```
+
+Пример содержимого файла модели:
+
+```php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class UserCategoryCashback extends Model
+{
+    use HasFactory;
+
+    protected $table = 'user_category_cashback'; // Указание имени таблицы
+
+    protected $fillable = ['user_identifier', 'category_id', 'card_id', 'cashback_percent', 'month', 'year'];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+    
+    public function card()
+    {
+        return $this->belongsTo(Card::class);
+    }
+}
+```
+
+## Шаг 3: Создание контроллера
+
+```bash
+php artisan make:controller UserCategoryCashbackController
+```
+
+Пример содержимого файла контроллера:
+
+```php
+<?php
+
+namespace App\Http\Controllers;
+use App\Models\Card;
+use App\Models\UserCategoryCashback;
+use Illuminate\Http\Request;
+use App\Http\Resources\UserCategoryCashbackResource;
+use Illuminate\Support\Facades\DB;
+
+class UserCategoryCashbackController extends Controller
+{
+    public function index(Request $request, $month, $year)
+    {
+        $userIdentifier = $request->user_identifier;
+
+        $cashbacks = UserCategoryCashback::where('user_identifier', $userIdentifier)
+            ->where('month', $month)
+            ->where('year', $year)
+            ->get();
+
+        return UserCategoryCashbackResource::collection($cashbacks);
+    }
+
+public function store(Request $request)
+{
+    // Валидация наличия card_id и общих полей
+    $validated = $request->validate([
+        'user_identifier' => 'required',
+        'card_id' => 'required|exists:cards,id', // Валидируем card_id
+        'month' => 'required|integer|min:1|max:12',
+        'year' => 'required|integer|min:2023',
+    ]);
+
+    // Получаем данные из валидации
+    $userIdentifier = $validated['user_identifier'];
+    $cardId = $validated['card_id'];
+    $month = $validated['month'];
+    $year = $validated['year'];
+
+    // Получаем информацию о карте
+    $card = Card::find($cardId);
+
+    // Проверяем, можно ли выбирать категории для этой карты
+    if ($card->allows_category_selection) {
+        // Если можно выбирать категории, валидируем и обрабатываем массив data
+        $validatedData = $request->validate([
+            'data' => 'required|array', // data обязательно, если можно выбирать категории
+            'data.*.category_id' => 'required|exists:categories,id',
+            'data.*.cashback_percent' => 'required|numeric|min:0|max:100',
+        ]);
+
+        // Обрабатываем данные из массива data
+        DB::transaction(function () use ($userIdentifier, $month, $year, $validatedData, $cardId) {
+            // Удаляем старые данные для данного пользователя, месяца и года
+            UserCategoryCashback::where('user_identifier', $userIdentifier)
+                ->where('month', $month)
+                ->where('year', $year)
+                ->delete();
+
+            // Проходим по данным и сохраняем их
+            foreach ($validatedData['data'] as $entry) {
+                UserCategoryCashback::create([
+                    'user_identifier' => $userIdentifier,
+                    'category_id' => $entry['category_id'],
+                    'card_id' => $cardId,
+                    'cashback_percent' => $entry['cashback_percent'],
+                    'month' => $month,
+                    'year' => $year,
+                ]);
+            }
+        });
+
+    } else {
+        // Если категории нельзя выбирать, добавляем моковые категории
+        DB::transaction(function () use ($userIdentifier, $month, $year, $cardId) {
+            // Получаем моковые категории
+            // $mockCategories = Category::where('is_mock', true)->get();
+
+            // Удаляем старые данные для данного пользователя, месяца и года
+            UserCategoryCashback::where('user_identifier', $userIdentifier)
+                ->where('month', $month)
+                ->where('year', $year)
+                ->delete();
+
+            // Добавляем данные с моковыми категориями
+            // foreach ($mockCategories as $mockCategory) {
+                UserCategoryCashback::create([
+                    'user_identifier' => "12345",
+                    'category_id' => 1,
+                    'card_id' => $cardId,
+                    'cashback_percent' => 777, // Здесь можно задать дефолтное значение для моковых категорий
+                    'month' => $month,
+                    'year' => $year,
+                ]);
+            // }
+        });
+    }
+
+    return response()->json(['message' => 'Данные успешно сохранены.']);
+}
+
+
+    public function history(Request $request)
+    {
+        $validated = $request->validate([
+            'user_identifier' => 'required',
+        ]);
+
+        $userIdentifier = $validated['user_identifier'];
+        $currentYear = now()->year;
+        $cashbacks = UserCategoryCashback::where('user_identifier', $userIdentifier)
+            ->where('year', '>=', $currentYear - 1)
+            ->orderBy('year', 'desc')
+            ->orderBy('month', 'desc')
+            ->get();
+
+        return UserCategoryCashbackResource::collection($cashbacks);
+    }
+}
+```
+
+## Шаг 4: Создание ресурса
+
+```bash
+php artisan make:resource UserCategoryCashbackResource
+```
+
+Пример содержимого файла ресурса:
+
+```php
+namespace App\Http\Resources;
+
+use Illuminate\Http\Resources\Json\JsonResource;
+
+class UserCategoryCashbackResource extends JsonResource
+{
+    public function toArray($request)
+    {
+        return [
+            'id' => $this->id,
+            'category' => new CategoryResource($this->category),
+            'card' => new CardResource($this->card),
+            'cashback_percent' => $this->cashback_percent,
+            'month' => $this->month,
+            'year' => $this->year,
+        ];
+    }
+}
+```
+
+## Шаг 5: Роутинг
+
+Добавьте маршруты в файл `routes/api.php`:
+
+```php
+use App\Http\Controllers\UserCategoryCashbackController;
+
+Route::get('/user/cashbacks/{month}/{year}', [UserCategoryCashbackController::class, 'index']);
+Route::post('/user/cashbacks', [UserCategoryCashbackController::class, 'store']);
+Route::get('/user/cashbacks/history', [UserCategoryCashbackController::class, 'history']);
+```
+
+## Примеры cURL-запросов
+
+### Получение кешбэков для пользователя, месяца и года
+
+```bash
+curl -X GET \
+  "http://mcc-codes.lantic.ru/api/user/cashbacks/1/2025" \
+  -H "Content-Type: application/json" \
+  -d '{"user_identifier": 12345}'
+```
+
+### Создание кешбэков
+
+```bash
+curl -X POST \
+  "http://mcc-codes.lantic.ru/api/user/cashbacks" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "user_identifier": 12345,
+    "month": 1,
+    "year": 2025,
+    "data": [
+      {"category_id": 1, "card_id": 1, "cashback_percent": 5.5},
+      {"category_id": 2, "card_id": 1, "cashback_percent": 7.0}
+    ]
+  }'
+```
+ 
+### Получение истории кешбэков за последний год
+
+```bash
+curl -X GET \
+  "http://mcc-codes.lantic.ru/api/user/cashbacks/history" \
+  -H "Content-Type: application/json" \
+  -d '{"user_identifier": 12345}'
+```
+
+
+
+## Шаг 100500: Создание миграций
+
+### Команды для создания миграций
+```bash
+php artisan make:migration create_fixed_categories_for_cards_table
+```
+
+### Код для миграций
+
+#### `create_fixed_categories_for_cards_table.php`
+```
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateFixedCategoriesForCardsTable extends Migration
+{
+    public function up()
+    {
+        Schema::create('fixed_categories_for_cards', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('card_id'); // Идентификатор карты
+            $table->unsignedBigInteger('category_id'); // Идентификатор категории
+            $table->decimal('cashback_percent', 5, 2); // Процент кешбэка
+            $table->timestamps();
+
+            $table->foreign('card_id')->references('id')->on('cards')->onDelete('cascade');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('fixed_categories_for_cards');
+    }
+}
+```
+
+
+
+---
+
+## Шаг 200500: Создание моделей
+
+### Команды для создания моделей
+```bash
+php artisan make:model FixedCategoryForCard
+```
+
+#### Модель `Category`
+```php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class FixedCategoryForCard extends Model
+{
+    use HasFactory;
+
+    protected $table = 'fixed_categories_for_cards'; // Указание имени таблицы
+
+    protected $fillable = ['card_id', 'category_id', 'cashback_percent'];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function card()
+    {
+        return $this->belongsTo(Card::class);
+    }
+}
+```
