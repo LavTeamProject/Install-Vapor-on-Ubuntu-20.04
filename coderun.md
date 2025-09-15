@@ -99,109 +99,6 @@ print(distances[end])
 
 ---
 14. [Блохи](https://coderun.yandex.ru/problem/fleas)
-15. [Путь спелеолога](https://coderun.yandex.ru/problem/speleologist-way)
-28. [НВП с восстановлением ответа](https://coderun.yandex.ru/problem/nvp-with-response-recovery)
-33. [Расстояние по Левенштейну](https://coderun.yandex.ru/problem/levenstein-distance)
-34. [Космический мусорщик](https://coderun.yandex.ru/problem/space-scavenger)
-39. [Откуда достижима первая вершина](https://coderun.yandex.ru/problem/first-vertex)
-43. [Два коня](https://coderun.yandex.ru/problem/two-horses)
-44. [Числа](https://coderun.yandex.ru/problem/numbers)
-51. [Номер появления слова](https://coderun.yandex.ru/problem/word-appearance-number)
-52. [Словарь синонимов](https://coderun.yandex.ru/problem/dictionary-synonyms)
-54. [Полиглоты](https://coderun.yandex.ru/problem/polyglots)
-55. [Злые свинки](https://coderun.yandex.ru/problem/angry-pigs)
-57. [Инопланетный геном](https://coderun.yandex.ru/problem/alien-genome)
-58. [OpenCalculator](https://coderun.yandex.ru/problem/open-calculator)
-60. [Кубики](https://coderun.yandex.ru/problem/cubes)
-61. [Пересечение множеств](https://coderun.yandex.ru/problem/intersection-sets)
-62. [Количество различных чисел](https://coderun.yandex.ru/problem/number-different-numbers)
-64. [Сапёр](https://coderun.yandex.ru/problem/sapper)
-69. [Больше своих соседей](https://coderun.yandex.ru/problem/more-your-neighbors)
-70. [Ближайшее число](https://coderun.yandex.ru/problem/nearest-number)
-71. [Определить вид последовательности](https://coderun.yandex.ru/problem/determine-type-sequence)
-72. [Возрастает ли список?](https://coderun.yandex.ru/problem/list-growing)
-74. [Узник замка Иф](https://coderun.yandex.ru/problem/castle-if)
-75. [Метро](https://coderun.yandex.ru/problem/metro)
-80. [Телефонные номера](https://coderun.yandex.ru/problem/phone-numbers)
-81. [Треугольник](https://coderun.yandex.ru/problem/triangle)
-82. [Кондиционер](https://coderun.yandex.ru/problem/conditioner)
-83. [Клавиатура](https://coderun.yandex.ru/problem/keyboard)
-84. [Пирамида](https://coderun.yandex.ru/problem/pyramid)
-86. [Банковские счета](https://coderun.yandex.ru/problem/bank-accounts)
-88. [Контрольная по ударениям](https://coderun.yandex.ru/problem/control-accent)
-91. [Сумма номеров](https://coderun.yandex.ru/problem/sum-of-numbers)
-93. [Город Че](https://coderun.yandex.ru/problem/city-of-che)
-96. [Подстрока](https://coderun.yandex.ru/problem/substring)
-99. [Двоичный поиск](https://coderun.yandex.ru/problem/binary-search)
-100. [Приближенный двоичный поиск](https://coderun.yandex.ru/problem/bpproximate-binary-search)
-101. [Дипломы](https://coderun.yandex.ru/problem/diplomas)
-103. [Расстановка ноутбуков](https://coderun.yandex.ru/problem/arrangement-laptops)
-106. [Провода](https://coderun.yandex.ru/problem/wires)
-108. [Медиана объединения](https://coderun.yandex.ru/problem/median-union)
-114. [Кассы](https://coderun.yandex.ru/problem/cash-registers)
-120. [Высота дерева](https://coderun.yandex.ru/problem/tree-height)
-121. [Глубина добавляемых элементов](https://coderun.yandex.ru/problem/depth-added-elements)
-124. [Вывод листьев](https://coderun.yandex.ru/problem/leaf-conclusion)
-125. [Вывод развилок](https://coderun.yandex.ru/problem/fork-conclusion)
-126. [Вывод веток](https://coderun.yandex.ru/problem/branches-conclusion)
-127. [АВЛ-сбалансированность](https://coderun.yandex.ru/problem/avl-balance)
-129. [Родословная: подсчет уровней](https://coderun.yandex.ru/problem/pedigree-counting-levels)
-130. [Гистограмма](https://coderun.yandex.ru/problem/histogram)
-132. [Коллекционер Диего](https://coderun.yandex.ru/problem/collector-diego)
-134. [Хорошая строка](https://coderun.yandex.ru/problem/good-line)
-135. [Операционные системы lite](https://coderun.yandex.ru/problem/lite-operating-systems)
-137. [Минимальный прямоугольник](https://coderun.yandex.ru/problem/minimum-rectangle)
-138. [Сумма в прямоугольнике](https://coderun.yandex.ru/problem/rectangle-sum)
-139. [Скучная лекция](https://coderun.yandex.ru/problem/boring-lecture)
-140. [Стек с защитой от ошибок](https://coderun.yandex.ru/problem/stack-protection-from-errors)
-141. [Правильная скобочная последовательность](https://coderun.yandex.ru/problem/correct-bracket-sequence)
-142. [Постфиксная запись](https://coderun.yandex.ru/problem/postfix-entry)
-143. [Сортировка вагонов lite](https://coderun.yandex.ru/problem/sorting-of-wagons-lite)
-144. [Великое Лайнландское переселение](https://coderun.yandex.ru/problem/great-lineland-migration)
-145. [Очередь с защитой от ошибок](https://coderun.yandex.ru/problem/queue-with-error-protection)
-146. [Игра в пьяницу](https://coderun.yandex.ru/problem/drunkard-game)
-147. [Дек с защитой от ошибок](https://coderun.yandex.ru/problem/dec-with-error-protection)
-148. [Хипуй](https://coderun.yandex.ru/problem/hipuy)
-149. [Пирамидальная сортировка](https://coderun.yandex.ru/problem/pyramid-sorting)
-150. [Три единицы подряд](https://coderun.yandex.ru/problem/three-blocks-row)
-151. [Кузнечик](https://coderun.yandex.ru/problem/grasshopper)
-175. [Уникальные пользователи](https://coderun.yandex.ru/problem/unique-users)
-220. [Нормализация показателей](https://coderun.yandex.ru/problem/normalization-of-indicators)
-272. [Простая подсказка](https://coderun.yandex.ru/problem/simple-suggest)
-290. [Игра](https://coderun.yandex.ru/problem/game)
-294. [Сумма различных](https://coderun.yandex.ru/problem/summ-of-the-various)
-302. [Восстановить матрицу](https://coderun.yandex.ru/problem/restore-the-matrix)
-304. [Проверка палиндрома](https://coderun.yandex.ru/problem/palindroming-check)
-310. [Кодирование длин серий](https://coderun.yandex.ru/problem/rle-test)
-374. [Оценка](https://coderun.yandex.ru/problem/mark)
-405. [Тетрамино](https://coderun.yandex.ru/problem/tetramino)
-410. [Сложить и вычесть](https://coderun.yandex.ru/problem/calc-expression)
-455. [Села батарейка](https://coderun.yandex.ru/problem/dead-battery)
-456. [Запускайте гуся](https://coderun.yandex.ru/problem/release-the-goose)
-458. [Восстановление отчётов](https://coderun.yandex.ru/problem/report-restoration)
-467. [Суеверный коллекционер](https://coderun.yandex.ru/problem/next-lucky-ticket)
-469. [Игра в города](https://coderun.yandex.ru/problem/city-games)
-470. [Чёрное и белое](https://coderun.yandex.ru/problem/black-and-white)
-471. [Журнал без дат](https://coderun.yandex.ru/problem/log-without-dates)
-475. [Баг в БД](https://coderun.yandex.ru/problem/bug-in-library)
-476. [Градиент](https://coderun.yandex.ru/problem/gradient)
-478. [Сокращение маршрута](https://coderun.yandex.ru/problem/route-reduction)
-543. [Классы подобия треугольников](https://coderun.yandex.ru/problem/triangle-similarity)
-4728. [Крош, Ежик и квадратичная игра](https://coderun.yandex.ru/problem/krosh-and-game)
-4729. [Крош и строка](https://coderun.yandex.ru/problem/krosh-and-string)
-5202. [Юля, Никита и задачи](https://coderun.yandex.ru/problem/season-tasks)
-5204. [Умножай и транспонируй!](https://coderun.yandex.ru/problem/matrix-operations)
-5205. [Ещё одна задача на теорию чисел](https://coderun.yandex.ru/problem/gcd-and-lcm)
-5206. [Выставление тегов](https://coderun.yandex.ru/problem/calculate-tags)
-5316. [Снежки](https://coderun.yandex.ru/problem/snowballs)
-5317. [В город на ярмарку](https://coderun.yandex.ru/problem/new-year-fair)
-5321. [Наряжаем ёлку](https://coderun.yandex.ru/problem/decorating-tree)
-
-
-
-
-
-
 
 **14. Блохи**
 
@@ -273,7 +170,10 @@ if isPossible {
 
 ---
 
-**15. Путь спелеолога**
+
+
+15. [Путь спелеолога](https://coderun.yandex.ru/problem/speleologist-way)
+    **15. Путь спелеолога**
 
 **Условие задачи:**
 Пещера представлена кубом, разбитым на N частей по каждому измерению (то есть на N^3 кубических клеток). Каждая клетка может быть или пустой, или полностью заполненной камнем. Исходя из положения спелеолога в пещере, требуется найти, какое минимальное количество перемещений по клеткам ему требуется, чтобы выбраться на поверхность. Переходить из клетки в клетку можно, только если они обе свободны и имеют общую грань.
@@ -346,6 +246,7 @@ while !queue.isEmpty {
 ```
 
 ---
+28. [НВП с восстановлением ответа](https://coderun.yandex.ru/problem/nvp-with-response-recovery)
 
 **28. НВП с восстановлением ответа**
 
@@ -404,6 +305,9 @@ print()
 
 ---
 
+33. [Расстояние по Левенштейну](https://coderun.yandex.ru/problem/levenstein-distance)
+
+
 **33. Расстояние по Левенштейну**
 
 **Условие задачи:**
@@ -458,6 +362,10 @@ print(dp[m][n])
 
 ---
 
+34. [Космический мусорщик](https://coderun.yandex.ru/problem/space-scavenger)
+39. [Откуда достижима первая вершина](https://coderun.yandex.ru/problem/first-vertex)
+
+
 **39. Откуда достижима первая вершина**
 
 **Условие задачи:**
@@ -511,6 +419,9 @@ for i in 1...n {
 
 ---
 
+
+43. [Два коня](https://coderun.yandex.ru/problem/two-horses)
+    
 **43. Два коня**
 
 **Условие задачи:**
@@ -588,6 +499,7 @@ print(-1)
 ```
 
 ---
+
 
 **44. Числа**
 
@@ -669,7 +581,8 @@ while !queue.isEmpty {
 
 ---
 
-**51. Номер появления слова**
+45. [Числа](https://coderun.yandex.ru/problem/numbers)
+51. [Номер появления слова](https://coderun.yandex.ru/problem/word-appearance-number)
 
 **Условие задачи:**
 Во входном файле (вы можете читать данные из файла input.txt) записан текст. Словом считается последовательность непробельных символов идущих подряд, слова разделены одним или большим числом пробелов или символами конца строки. Для каждого слова из этого текста подсчитайте, сколько раз оно встречалось в этом тексте ранее.
@@ -699,12 +612,96 @@ for word in words {
 }
 ```
 
-Хорошо, вот следующие 10 задач из списка с решениями на Swift:
+52. [Словарь синонимов](https://coderun.yandex.ru/problem/dictionary-synonyms)
+54. [Полиглоты](https://coderun.yandex.ru/problem/polyglots)
+55. [Злые свинки](https://coderun.yandex.ru/problem/angry-pigs)
+57. [Инопланетный геном](https://coderun.yandex.ru/problem/alien-genome)
+58. [OpenCalculator](https://coderun.yandex.ru/problem/open-calculator)
+60. [Кубики](https://coderun.yandex.ru/problem/cubes)
+61. [Пересечение множеств](https://coderun.yandex.ru/problem/intersection-sets)
+62. [Количество различных чисел](https://coderun.yandex.ru/problem/number-different-numbers)
+64. [Сапёр](https://coderun.yandex.ru/problem/sapper)
+69. [Больше своих соседей](https://coderun.yandex.ru/problem/more-your-neighbors)
+70. [Ближайшее число](https://coderun.yandex.ru/problem/nearest-number)
+71. [Определить вид последовательности](https://coderun.yandex.ru/problem/determine-type-sequence)
+72. [Возрастает ли список?](https://coderun.yandex.ru/problem/list-growing)
+74. [Узник замка Иф](https://coderun.yandex.ru/problem/castle-if)
+75. [Метро](https://coderun.yandex.ru/problem/metro)
+80. [Телефонные номера](https://coderun.yandex.ru/problem/phone-numbers)
+81. [Треугольник](https://coderun.yandex.ru/problem/triangle)
+82. [Кондиционер](https://coderun.yandex.ru/problem/conditioner)
+83. [Клавиатура](https://coderun.yandex.ru/problem/keyboard)
+84. [Пирамида](https://coderun.yandex.ru/problem/pyramid)
+86. [Банковские счета](https://coderun.yandex.ru/problem/bank-accounts)
+88. [Контрольная по ударениям](https://coderun.yandex.ru/problem/control-accent)
 
-**101. Дипломы**
+
+**88. Контрольная по ударениям**
 
 **Условие задачи:**
-Когда Петя учился в школе, он часто участвовал в олимпиадах по информатике, математике и физике. Так как он был достаточно способным мальчиком и усердно учился, то на многих из этих олимпиад он получал дипломы. К окончанию школы у него накопилось n дипломов, причём, как оказалось, все они имели одинаковые размеры: w — в ширину и h — в высоту. Сейчас Петя учится в одном из лучших российских университетов и живёт в общежитии со своими одногруппниками. Он решил украсить свою комнату, повесив на одну из стен свои дипломы за школьные олимпиады. Так как к бетонной стене прикрепить дипломы достаточно трудно, то он решил купить специальную доску из пробкового дерева, чтобы прикрепить её к стене, а к ней — дипломы. Для того чтобы эта конструкция выглядела более красиво, Петя хочет, чтобы доска была квадратной и занимала как можно меньше места на стене. Каждый диплом должен быть размещён строго в прямоугольнике размером w на h. Дипломы запрещается поворачивать на 90 градусов. Прямоугольники, соответствующие различным дипломам, не должны иметь общих внутренних точек. Требуется написать программу, которая вычислит минимальный размер стороны доски, которая потребуется Пете для размещения всех своих дипломов.
+Учительница задала Пете домашнее задание — в заданном тексте расставить ударения в словах, после чего поручила Васе проверить это домашнее задание. Вася очень плохо знаком с данной темой, поэтому он нашел словарь, в котором указано, как ставятся ударения в словах. К сожалению, в этом словаре присутствуют не все слова. Вася решил, что в словах, которых нет в словаре, он будет считать, что Петя поставил ударения правильно, если в этом слове Петей поставлено ровно одно ударение. Оказалось, что в некоторых словах ударение может быть поставлено больше, чем одним способом. Вася решил, что в этом случае если то, как Петя поставил ударение, соответствует одному из приведённых в словаре вариантов, он будет засчитывать это как правильную расстановку ударения, а если не соответствует, то как ошибку. Вам дан словарь, которым пользовался Вася и домашнее задание, сданное Петей. Ваша задача — определить количество ошибок, которое в этом задании насчитает Вася.
+
+**Решение задачи на Swift:**
+
+```swift
+import Foundation
+
+// Считываем количество слов в словаре
+let n = Int(readLine()!)!
+
+// Словарь для хранения правильных вариантов ударений
+var accentDictionary: [String: Set<String>] = [:]
+
+// Считываем слова из словаря
+for _ in 0..<n {
+    let word = readLine()!
+    let lowercasedWord = word.lowercased()
+    if accentDictionary[lowercasedWord] == nil {
+        accentDictionary[lowercasedWord] = Set<String>()
+    }
+    accentDictionary[lowercasedWord]!.insert(word)
+}
+
+// Считываем текст Пети
+let peteText = readLine()!
+
+// Разбиваем текст на слова
+let words = peteText.split(separator: " ").map { String($0) }
+
+var errorCount = 0
+
+// Проверяем каждое слово
+for word in words {
+    let lowercasedWord = word.lowercased()
+    let accentCount = word.filter { $0.isUppercase }.count
+    
+    // Если нет заглавных букв или больше одной заглавной буквы - ошибка
+    if accentCount != 1 {
+        errorCount += 1
+        continue
+    }
+    
+    // Если слово есть в словаре
+    if let validAccents = accentDictionary[lowercasedWord] {
+        // Проверяем, совпадает ли ударение с одним из вариантов в словаре
+        if !validAccents.contains(word) {
+            errorCount += 1
+        }
+    }
+    // Если слова нет в словаре, то по условию оно считается правильным (т.к. accentCount == 1)
+}
+
+print(errorCount)
+```
+
+---
+
+91. [Сумма номеров](https://coderun.yandex.ru/problem/sum-of-numbers)
+
+**91. Сумма номеров**
+
+**Условие задачи:**
+Вася очень любит везде искать своё счастливое число K. Каждый день он ходит в школу по улице, вдоль которой припарковано N машин. Он заинтересовался вопросом, сколько существует отрезков из подряд идущих машин таких, что сумма их номеров равна K. Помогите Васе узнать ответ на его вопрос.
 
 **Решение задачи на Swift:**
 
@@ -712,66 +709,89 @@ for word in words {
 import Foundation
 
 // Считываем входные данные
-let input = readLine()!.split(separator: " ").map { Int($0)! }
-let n = input[0] // Количество дипломов
-let w = input[1] // Ширина диплома
-let h = input[2] // Высота диплома
+let nk = readLine()!.split(separator: " ").map { Int($0)! }
+let n = nk[0] // Количество машин
+let k = nk[1] // Счастливое число
 
-// Если дипломов нет, доска не нужна
-if n == 0 {
-    print(0)
-    exit(0)
-}
+// Считываем номера машин
+let carNumbers = readLine()!.split(separator: " ").map { Int($0)! }
 
-// Бинарный поиск по размеру стороны квадратной доски
-var left = max(w, h)
-var right = max(w, h) * n
+var count = 0
+var prefixSum = 0
+var sumCount: [Int: Int] = [0: 1] // Словарь для хранения количества префиксных сумм
 
-// Функция для проверки, помещаются ли все дипломы на доску со стороной size
-func canPlace(_ size: Int) -> Bool {
-    let rows = size / h // Количество рядов по высоте
-    let cols = size / w // Количество колонок по ширине
-    return rows * cols >= n
-}
-
-while left < right {
-    let mid = (left + right) / 2
-    if canPlace(mid) {
-        right = mid
-    } else {
-        left = mid + 1
+// Используем метод префиксных сумм
+for i in 0..<n {
+    prefixSum += carNumbers[i]
+    
+    // Проверяем, существует ли префиксная сумма (prefixSum - k)
+    if let existingCount = sumCount[prefixSum - k] {
+        count += existingCount
     }
+    
+    // Обновляем словарь с текущей префиксной суммой
+    sumCount[prefixSum, default: 0] += 1
 }
 
-print(left)
+print(count)
 ```
 
 ---
 
-**103. Расстановка ноутбуков**
+93. [Город Че](https://coderun.yandex.ru/problem/city-of-che)
+96. [Подстрока](https://coderun.yandex.ru/problem/substring)
+
+**96. Подстрока**
 
 **Условие задачи:**
-В школе решили на один прямоугольный стол поставить два прямоугольных ноутбука. Ноутбуки нужно поставить так, чтобы их стороны были параллельны сторонам стола. Определите, какие размеры должен иметь стол, чтобы оба ноутбука на него поместились, а площадь стола была минимальна.
+В этой задаче Вам требуется найти максимальную по длине подстроку данной строки, такую что каждый символ встречается в ней не более k раз.
 
 **Решение задачи на Swift:**
 
 ```swift
-let input = readLine()!.split(separator: " ").map { Int($0)! }
-let a = input[0], b = input[1], c = input[2], d = input[3]
+import Foundation
 
-// Все возможные варианты расположения
-let variants = [
-    (a + c, max(b, d)),           // ноутбуки в ряд по горизонтали
-    (max(a, c), b + d),           // ноутбуки в ряд по вертикали
-    (a + d, max(b, c)),           // первый горизонтально, второй вертикально
-    (max(a, d), b + c)            // первый вертикально, второй горизонтально
-]
+// Считываем входные данные
+let nk = readLine()!.split(separator: " ").map { Int($0)! }
+let n = nk[0] // Длина строки
+let k = nk[1] // Максимальное количество повторений символа
 
-let minVariant = variants.min { $0.0 * $0.1 < $1.0 * $1.1 }!
-print(minVariant.0, minVariant.1)
+// Считываем строку
+let s = readLine()!
+
+// Используем алгоритм двух указателей
+var charCount: [Character: Int] = [:]
+var left = 0
+var maxLength = 0
+var bestStart = 0
+
+for right in 0..<n {
+    let rightChar = s[s.index(s.startIndex, offsetBy: right)]
+    charCount[rightChar, default: 0] += 1
+    
+    // Если какой-то символ встречается больше k раз, сдвигаем левый указатель
+    while charCount[rightChar]! > k {
+        let leftChar = s[s.index(s.startIndex, offsetBy: left)]
+        charCount[leftChar]! -= 1
+        if charCount[leftChar] == 0 {
+            charCount.removeValue(forKey: leftChar)
+        }
+        left += 1
+    }
+    
+    // Обновляем максимальную длину и позицию начала
+    let currentLength = right - left + 1
+    if currentLength > maxLength {
+        maxLength = currentLength
+        bestStart = left
+    }
+}
+
+print(maxLength, bestStart + 1) // Нумерация с 1
 ```
 
----
+99. [Двоичный поиск](https://coderun.yandex.ru/problem/binary-search)
+100. [Приближенный двоичный поиск](https://coderun.yandex.ru/problem/bpproximate-binary-search)
 
 **100. Приближенный двоичный поиск**
 
@@ -844,6 +864,159 @@ for target in secondArray {
 
 ---
 
+
+
+101. [Дипломы](https://coderun.yandex.ru/problem/diplomas)
+103. [Расстановка ноутбуков](https://coderun.yandex.ru/problem/arrangement-laptops)
+
+**103. Расстановка ноутбуков**
+
+**Условие задачи:**
+В школе решили на один прямоугольный стол поставить два прямоугольных ноутбука. Ноутбуки нужно поставить так, чтобы их стороны были параллельны сторонам стола. Определите, какие размеры должен иметь стол, чтобы оба ноутбука на него поместились, а площадь стола была минимальна.
+
+**Решение задачи на Swift:**
+
+```swift
+let input = readLine()!.split(separator: " ").map { Int($0)! }
+let a = input[0], b = input[1], c = input[2], d = input[3]
+
+// Все возможные варианты расположения
+let variants = [
+    (a + c, max(b, d)),           // ноутбуки в ряд по горизонтали
+    (max(a, c), b + d),           // ноутбуки в ряд по вертикали
+    (a + d, max(b, c)),           // первый горизонтально, второй вертикально
+    (max(a, d), b + c)            // первый вертикально, второй горизонтально
+]
+
+let minVariant = variants.min { $0.0 * $0.1 < $1.0 * $1.1 }!
+print(minVariant.0, minVariant.1)
+```
+
+---
+
+106. [Провода](https://coderun.yandex.ru/problem/wires)
+108. [Медиана объединения](https://coderun.yandex.ru/problem/median-union)
+114. [Кассы](https://coderun.yandex.ru/problem/cash-registers)
+120. [Высота дерева](https://coderun.yandex.ru/problem/tree-height)
+121. [Глубина добавляемых элементов](https://coderun.yandex.ru/problem/depth-added-elements)
+124. [Вывод листьев](https://coderun.yandex.ru/problem/leaf-conclusion)
+125. [Вывод развилок](https://coderun.yandex.ru/problem/fork-conclusion)
+126. [Вывод веток](https://coderun.yandex.ru/problem/branches-conclusion)
+127. [АВЛ-сбалансированность](https://coderun.yandex.ru/problem/avl-balance)
+129. [Родословная: подсчет уровней](https://coderun.yandex.ru/problem/pedigree-counting-levels)
+130. [Гистограмма](https://coderun.yandex.ru/problem/histogram)
+132. [Коллекционер Диего](https://coderun.yandex.ru/problem/collector-diego)
+134. [Хорошая строка](https://coderun.yandex.ru/problem/good-line)
+135. [Операционные системы lite](https://coderun.yandex.ru/problem/lite-operating-systems)
+137. [Минимальный прямоугольник](https://coderun.yandex.ru/problem/minimum-rectangle)
+138. [Сумма в прямоугольнике](https://coderun.yandex.ru/problem/rectangle-sum)
+139. [Скучная лекция](https://coderun.yandex.ru/problem/boring-lecture)
+140. [Стек с защитой от ошибок](https://coderun.yandex.ru/problem/stack-protection-from-errors)
+141. [Правильная скобочная последовательность](https://coderun.yandex.ru/problem/correct-bracket-sequence)
+142. [Постфиксная запись](https://coderun.yandex.ru/problem/postfix-entry)
+143. [Сортировка вагонов lite](https://coderun.yandex.ru/problem/sorting-of-wagons-lite)
+144. [Великое Лайнландское переселение](https://coderun.yandex.ru/problem/great-lineland-migration)
+145. [Очередь с защитой от ошибок](https://coderun.yandex.ru/problem/queue-with-error-protection)
+146. [Игра в пьяницу](https://coderun.yandex.ru/problem/drunkard-game)
+147. [Дек с защитой от ошибок](https://coderun.yandex.ru/problem/dec-with-error-protection)
+148. [Хипуй](https://coderun.yandex.ru/problem/hipuy)
+149. [Пирамидальная сортировка](https://coderun.yandex.ru/problem/pyramid-sorting)
+150. [Три единицы подряд](https://coderun.yandex.ru/problem/three-blocks-row)
+151. [Кузнечик](https://coderun.yandex.ru/problem/grasshopper)
+175. [Уникальные пользователи](https://coderun.yandex.ru/problem/unique-users)
+220. [Нормализация показателей](https://coderun.yandex.ru/problem/normalization-of-indicators)
+272. [Простая подсказка](https://coderun.yandex.ru/problem/simple-suggest)
+290. [Игра](https://coderun.yandex.ru/problem/game)
+294. [Сумма различных](https://coderun.yandex.ru/problem/summ-of-the-various)
+302. [Восстановить матрицу](https://coderun.yandex.ru/problem/restore-the-matrix)
+304. [Проверка палиндрома](https://coderun.yandex.ru/problem/palindroming-check)
+310. [Кодирование длин серий](https://coderun.yandex.ru/problem/rle-test)
+374. [Оценка](https://coderun.yandex.ru/problem/mark)
+405. [Тетрамино](https://coderun.yandex.ru/problem/tetramino)
+410. [Сложить и вычесть](https://coderun.yandex.ru/problem/calc-expression)
+455. [Села батарейка](https://coderun.yandex.ru/problem/dead-battery)
+456. [Запускайте гуся](https://coderun.yandex.ru/problem/release-the-goose)
+458. [Восстановление отчётов](https://coderun.yandex.ru/problem/report-restoration)
+467. [Суеверный коллекционер](https://coderun.yandex.ru/problem/next-lucky-ticket)
+469. [Игра в города](https://coderun.yandex.ru/problem/city-games)
+470. [Чёрное и белое](https://coderun.yandex.ru/problem/black-and-white)
+471. [Журнал без дат](https://coderun.yandex.ru/problem/log-without-dates)
+475. [Баг в БД](https://coderun.yandex.ru/problem/bug-in-library)
+476. [Градиент](https://coderun.yandex.ru/problem/gradient)
+478. [Сокращение маршрута](https://coderun.yandex.ru/problem/route-reduction)
+543. [Классы подобия треугольников](https://coderun.yandex.ru/problem/triangle-similarity)
+4728. [Крош, Ежик и квадратичная игра](https://coderun.yandex.ru/problem/krosh-and-game)
+4729. [Крош и строка](https://coderun.yandex.ru/problem/krosh-and-string)
+5202. [Юля, Никита и задачи](https://coderun.yandex.ru/problem/season-tasks)
+5204. [Умножай и транспонируй!](https://coderun.yandex.ru/problem/matrix-operations)
+5205. [Ещё одна задача на теорию чисел](https://coderun.yandex.ru/problem/gcd-and-lcm)
+5206. [Выставление тегов](https://coderun.yandex.ru/problem/calculate-tags)
+5316. [Снежки](https://coderun.yandex.ru/problem/snowballs)
+5317. [В город на ярмарку](https://coderun.yandex.ru/problem/new-year-fair)
+5321. [Наряжаем ёлку](https://coderun.yandex.ru/problem/decorating-tree)
+
+
+
+
+
+
+
+
+
+
+
+
+Хорошо, вот следующие 10 задач из списка с решениями на Swift:
+
+**101. Дипломы**
+
+**Условие задачи:**
+Когда Петя учился в школе, он часто участвовал в олимпиадах по информатике, математике и физике. Так как он был достаточно способным мальчиком и усердно учился, то на многих из этих олимпиад он получал дипломы. К окончанию школы у него накопилось n дипломов, причём, как оказалось, все они имели одинаковые размеры: w — в ширину и h — в высоту. Сейчас Петя учится в одном из лучших российских университетов и живёт в общежитии со своими одногруппниками. Он решил украсить свою комнату, повесив на одну из стен свои дипломы за школьные олимпиады. Так как к бетонной стене прикрепить дипломы достаточно трудно, то он решил купить специальную доску из пробкового дерева, чтобы прикрепить её к стене, а к ней — дипломы. Для того чтобы эта конструкция выглядела более красиво, Петя хочет, чтобы доска была квадратной и занимала как можно меньше места на стене. Каждый диплом должен быть размещён строго в прямоугольнике размером w на h. Дипломы запрещается поворачивать на 90 градусов. Прямоугольники, соответствующие различным дипломам, не должны иметь общих внутренних точек. Требуется написать программу, которая вычислит минимальный размер стороны доски, которая потребуется Пете для размещения всех своих дипломов.
+
+**Решение задачи на Swift:**
+
+```swift
+import Foundation
+
+// Считываем входные данные
+let input = readLine()!.split(separator: " ").map { Int($0)! }
+let n = input[0] // Количество дипломов
+let w = input[1] // Ширина диплома
+let h = input[2] // Высота диплома
+
+// Если дипломов нет, доска не нужна
+if n == 0 {
+    print(0)
+    exit(0)
+}
+
+// Бинарный поиск по размеру стороны квадратной доски
+var left = max(w, h)
+var right = max(w, h) * n
+
+// Функция для проверки, помещаются ли все дипломы на доску со стороной size
+func canPlace(_ size: Int) -> Bool {
+    let rows = size / h // Количество рядов по высоте
+    let cols = size / w // Количество колонок по ширине
+    return rows * cols >= n
+}
+
+while left < right {
+    let mid = (left + right) / 2
+    if canPlace(mid) {
+        right = mid
+    } else {
+        left = mid + 1
+    }
+}
+
+print(left)
+```
+
+---
+
+
+
 **99. Двоичный поиск**
 
 **Условие задачи:**
@@ -897,54 +1070,6 @@ for target in secondArray {
 
 ---
 
-**96. Подстрока**
-
-**Условие задачи:**
-В этой задаче Вам требуется найти максимальную по длине подстроку данной строки, такую что каждый символ встречается в ней не более k раз.
-
-**Решение задачи на Swift:**
-
-```swift
-import Foundation
-
-// Считываем входные данные
-let nk = readLine()!.split(separator: " ").map { Int($0)! }
-let n = nk[0] // Длина строки
-let k = nk[1] // Максимальное количество повторений символа
-
-// Считываем строку
-let s = readLine()!
-
-// Используем алгоритм двух указателей
-var charCount: [Character: Int] = [:]
-var left = 0
-var maxLength = 0
-var bestStart = 0
-
-for right in 0..<n {
-    let rightChar = s[s.index(s.startIndex, offsetBy: right)]
-    charCount[rightChar, default: 0] += 1
-    
-    // Если какой-то символ встречается больше k раз, сдвигаем левый указатель
-    while charCount[rightChar]! > k {
-        let leftChar = s[s.index(s.startIndex, offsetBy: left)]
-        charCount[leftChar]! -= 1
-        if charCount[leftChar] == 0 {
-            charCount.removeValue(forKey: leftChar)
-        }
-        left += 1
-    }
-    
-    // Обновляем максимальную длину и позицию начала
-    let currentLength = right - left + 1
-    if currentLength > maxLength {
-        maxLength = currentLength
-        bestStart = left
-    }
-}
-
-print(maxLength, bestStart + 1) // Нумерация с 1
-```
 
 ---
 
@@ -993,105 +1118,7 @@ print(count)
 
 ---
 
-**91. Сумма номеров**
 
-**Условие задачи:**
-Вася очень любит везде искать своё счастливое число K. Каждый день он ходит в школу по улице, вдоль которой припарковано N машин. Он заинтересовался вопросом, сколько существует отрезков из подряд идущих машин таких, что сумма их номеров равна K. Помогите Васе узнать ответ на его вопрос.
-
-**Решение задачи на Swift:**
-
-```swift
-import Foundation
-
-// Считываем входные данные
-let nk = readLine()!.split(separator: " ").map { Int($0)! }
-let n = nk[0] // Количество машин
-let k = nk[1] // Счастливое число
-
-// Считываем номера машин
-let carNumbers = readLine()!.split(separator: " ").map { Int($0)! }
-
-var count = 0
-var prefixSum = 0
-var sumCount: [Int: Int] = [0: 1] // Словарь для хранения количества префиксных сумм
-
-// Используем метод префиксных сумм
-for i in 0..<n {
-    prefixSum += carNumbers[i]
-    
-    // Проверяем, существует ли префиксная сумма (prefixSum - k)
-    if let existingCount = sumCount[prefixSum - k] {
-        count += existingCount
-    }
-    
-    // Обновляем словарь с текущей префиксной суммой
-    sumCount[prefixSum, default: 0] += 1
-}
-
-print(count)
-```
-
----
-
-**88. Контрольная по ударениям**
-
-**Условие задачи:**
-Учительница задала Пете домашнее задание — в заданном тексте расставить ударения в словах, после чего поручила Васе проверить это домашнее задание. Вася очень плохо знаком с данной темой, поэтому он нашел словарь, в котором указано, как ставятся ударения в словах. К сожалению, в этом словаре присутствуют не все слова. Вася решил, что в словах, которых нет в словаре, он будет считать, что Петя поставил ударения правильно, если в этом слове Петей поставлено ровно одно ударение. Оказалось, что в некоторых словах ударение может быть поставлено больше, чем одним способом. Вася решил, что в этом случае если то, как Петя поставил ударение, соответствует одному из приведённых в словаре вариантов, он будет засчитывать это как правильную расстановку ударения, а если не соответствует, то как ошибку. Вам дан словарь, которым пользовался Вася и домашнее задание, сданное Петей. Ваша задача — определить количество ошибок, которое в этом задании насчитает Вася.
-
-**Решение задачи на Swift:**
-
-```swift
-import Foundation
-
-// Считываем количество слов в словаре
-let n = Int(readLine()!)!
-
-// Словарь для хранения правильных вариантов ударений
-var accentDictionary: [String: Set<String>] = [:]
-
-// Считываем слова из словаря
-for _ in 0..<n {
-    let word = readLine()!
-    let lowercasedWord = word.lowercased()
-    if accentDictionary[lowercasedWord] == nil {
-        accentDictionary[lowercasedWord] = Set<String>()
-    }
-    accentDictionary[lowercasedWord]!.insert(word)
-}
-
-// Считываем текст Пети
-let peteText = readLine()!
-
-// Разбиваем текст на слова
-let words = peteText.split(separator: " ").map { String($0) }
-
-var errorCount = 0
-
-// Проверяем каждое слово
-for word in words {
-    let lowercasedWord = word.lowercased()
-    let accentCount = word.filter { $0.isUppercase }.count
-    
-    // Если нет заглавных букв или больше одной заглавной буквы - ошибка
-    if accentCount != 1 {
-        errorCount += 1
-        continue
-    }
-    
-    // Если слово есть в словаре
-    if let validAccents = accentDictionary[lowercasedWord] {
-        // Проверяем, совпадает ли ударение с одним из вариантов в словаре
-        if !validAccents.contains(word) {
-            errorCount += 1
-        }
-    }
-    // Если слова нет в словаре, то по условию оно считается правильным (т.к. accentCount == 1)
-}
-
-print(errorCount)
-```
-
----
 
 **86. Банковские счета**
 
@@ -2196,34 +2223,5 @@ print(synonyms[word]!)
 ```
 
 ---
-
-**51. Номер появления слова**
-
-**Условие задачи:**
-Во входном файле записан текст. Словом считается последовательность непробельных символов идущих подряд, слова разделены одним или большим числом пробелов или символами конца строки. Для каждого слова из этого текста подсчитайте, сколько раз оно встречалось в этом тексте ранее.
-
-**Решение задачи на Swift:**
-
-```swift
-import Foundation
-
-// Словарь для хранения количества появлений каждого слова
-var wordCount: [String: Int] = [:]
-
-// Читаем весь текст
-var text = ""
-while let line = readLine() {
-    text += line + " "
-}
-
-// Разбиваем текст на слова и обрабатываем их
-let words = text.split(separator: " ").map { String($0) }
-
-for word in words {
-    let count = wordCount[word, default: 0]
-    print(count)
-    wordCount[word, default: 0] += 1
-}
-```
 
 
