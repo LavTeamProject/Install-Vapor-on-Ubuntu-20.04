@@ -104,7 +104,7 @@
 
 
 
-### 4. [Ход конём](https://coderun.yandex.ru/problem/knight-move)
+##### 4. [Ход конём](https://coderun.yandex.ru/problem/knight-move)
   
 **Условие задачи:**
 Дана прямоугольная доска N×M (N строк и M столбцов). В левом верхнем углу находится шахматный конь, которого необходимо переместить в правый нижний угол доски. В данной задаче конь может перемещаться на две клетки вниз и одну клетку вправо или на одну клетку вниз и две клетки вправо. Необходимо определить, сколько существует различных маршрутов, ведущих из левого верхнего в правый нижний угол.
@@ -153,7 +153,7 @@ print(dp[n][m])
 ```
 
 ---
-# 12. [Длина кратчайшего пути](https://coderun.yandex.ru/problem/shortest-path-length)
+##### 12. [Длина кратчайшего пути](https://coderun.yandex.ru/problem/shortest-path-length)
   
 **Условие задачи:**
 Дан неориентированный граф. Найдите длину минимального пути между двумя вершинами.
@@ -204,7 +204,7 @@ print(distances[end])
 ```
 
 ---
-# 14. [Блохи](https://coderun.yandex.ru/problem/fleas)
+##### 14. [Блохи](https://coderun.yandex.ru/problem/fleas)
 
 **Условие задачи:**
 На клеточном поле, размером NxM (2 ≤ N, M ≤ 250) сидит Q (0 ≤ Q ≤ 10000) блох в различных клетках. «Прием пищи» блохами возможен только в кормушке — одна из клеток поля, заранее известная. Блохи перемещаются по полю странным образом, а именно, прыжками, совпадающими с ходом обыкновенного шахматного коня. Длина пути каждой блохи до кормушки определяется как количество прыжков. Определить минимальное значение суммы длин путей блох до кормушки или, если собраться блохам у кормушки невозможно, то сообщить об этом. Сбор невозможен, если хотя бы одна из блох не может попасть к кормушке.
@@ -276,7 +276,7 @@ if isPossible {
 
 
 
-# 15. [Путь спелеолога](https://coderun.yandex.ru/problem/speleologist-way)
+### 15. [Путь спелеолога](https://coderun.yandex.ru/problem/speleologist-way)
 
 **Условие задачи:**
 Пещера представлена кубом, разбитым на N частей по каждому измерению (то есть на N^3 кубических клеток). Каждая клетка может быть или пустой, или полностью заполненной камнем. Исходя из положения спелеолога в пещере, требуется найти, какое минимальное количество перемещений по клеткам ему требуется, чтобы выбраться на поверхность. Переходить из клетки в клетку можно, только если они обе свободны и имеют общую грань.
@@ -349,7 +349,7 @@ while !queue.isEmpty {
 ```
 
 ---
-# 28. [НВП с восстановлением ответа](https://coderun.yandex.ru/problem/nvp-with-response-recovery)
+### 28. [НВП с восстановлением ответа](https://coderun.yandex.ru/problem/nvp-with-response-recovery)
 
 **Условие задачи:**
 Дана последовательность, требуется найти её наибольшую возрастающую подпоследовательность. Последовательность x называется подпоследовательностью последовательности y, если x получается из y удалением нескольких (возможно, нуля или всех) элементов. Наибольшая возрастающая подпоследовательность - строго возрастающая подпоследовательность наибольшей длины.
@@ -406,7 +406,7 @@ print()
 
 ---
 
-# 33. [Расстояние по Левенштейну](https://coderun.yandex.ru/problem/levenstein-distance)
+### 33. [Расстояние по Левенштейну](https://coderun.yandex.ru/problem/levenstein-distance)
 
 
 **Условие задачи:**
@@ -461,8 +461,8 @@ print(dp[m][n])
 
 ---
 
-# 34. [Космический мусорщик](https://coderun.yandex.ru/problem/space-scavenger)
-# 39. [Откуда достижима первая вершина](https://coderun.yandex.ru/problem/first-vertex)
+### 34. [Космический мусорщик](https://coderun.yandex.ru/problem/space-scavenger)
+### 39. [Откуда достижима первая вершина](https://coderun.yandex.ru/problem/first-vertex)
 
 **Условие задачи:**
 Дан ориентированный граф, возможно, с петлями и кратными ребрами. Необходимо найти все вершины, из которых достижима первая вершина.
@@ -516,7 +516,7 @@ for i in 1...n {
 ---
 
 
-# 43. [Два коня](https://coderun.yandex.ru/problem/two-horses)
+### 43. [Два коня](https://coderun.yandex.ru/problem/two-horses)
 
 **Условие задачи:**
 На стандартной шахматной доске (8х8) живут 2 шахматных коня: Красный и Зелёный. Обычно они беззаботно скачут по просторам доски, пощипывая шахматную травку, но сегодня особенный день: у Зелёного коня День Рождения. Зеленый конь решил отпраздновать это событие вместе с Красным. Но для осуществления этого прекрасного плана им нужно оказаться на одной клетке. Заметим, что Красный и Зелёный шахматные кони сильно отличаются от черного с белым: они ходят не по очереди, а одновременно, и если оказываются на одной клетке, никто никого не съедает. Сколько ходов им потребуется, чтобы насладиться праздником?
@@ -594,7 +594,7 @@ print(-1)
 
 ---
 
-# 44. [Числа](https://coderun.yandex.ru/problem/numbers)
+### 44. [Числа](https://coderun.yandex.ru/problem/numbers)
 
 **Условие задачи:**
 Витя хочет придумать новую игру с числами. В этой игре от игроков требуется преобразовывать четырехзначные числа не содержащие нулей при помощи следующего разрешенного набора действий: 1. Можно увеличить первую цифру числа на 1, если она не равна 9. 2. Можно уменьшить последнюю цифру на 1, если она не равна 1. 3. Можно циклически сдвинуть все цифры на одну вправо. 4. Можно циклически сдвинуть все цифры на одну влево. Например, применяя эти правила к числу 1234 можно получить числа 2234, 1233, 4123 и 2341 соответственно. Точные правила игры Витя пока не придумал, но пока его интересует вопрос, как получить из одного числа другое за минимальное количество операций.
@@ -674,8 +674,8 @@ while !queue.isEmpty {
 
 ---
 
-# 45. [Числа](https://coderun.yandex.ru/problem/numbers)
-# 51. [Номер появления слова](https://coderun.yandex.ru/problem/word-appearance-number)
+### 45. [Числа](https://coderun.yandex.ru/problem/numbers)
+### 51. [Номер появления слова](https://coderun.yandex.ru/problem/word-appearance-number)
 
 **Условие задачи:**
 Во входном файле (вы можете читать данные из файла input.txt) записан текст. Словом считается последовательность непробельных символов идущих подряд, слова разделены одним или большим числом пробелов или символами конца строки. Для каждого слова из этого текста подсчитайте, сколько раз оно встречалось в этом тексте ранее.
@@ -705,7 +705,7 @@ for word in words {
 }
 ```
 
-# 52. [Словарь синонимов](https://coderun.yandex.ru/problem/dictionary-synonyms)
+### 52. [Словарь синонимов](https://coderun.yandex.ru/problem/dictionary-synonyms)
 
 
 **Условие задачи:**
@@ -742,7 +742,7 @@ print(synonyms[word]!)
 ---
 
 
-# 54. [Полиглоты](https://coderun.yandex.ru/problem/polyglots)
+### 54. [Полиглоты](https://coderun.yandex.ru/problem/polyglots)
 
 
 **Условие задачи:**
@@ -799,7 +799,7 @@ for language in all {
 ---
 
 
-# 55. [Злые свинки](https://coderun.yandex.ru/problem/angry-pigs)
+### 55. [Злые свинки](https://coderun.yandex.ru/problem/angry-pigs)
 
 **Условие задачи:**
 Птицы в игре представляются точками на плоскости. Выстрел сбивает только ближайшую птицу находящуюся на линии огня. При этом сбитая птица, падая, сбивает всех птиц, находящихся ровно под ней. Две птицы не могут находиться в одной точке. По заданному расположению птиц необходимо определить, какое минимальное количество выстрелов необходимо, чтобы все птицы были сбиты.
@@ -833,7 +833,7 @@ print(xCoords.count)
 
 ---
 
-# 57. [Инопланетный геном](https://coderun.yandex.ru/problem/alien-genome)
+### 57. [Инопланетный геном](https://coderun.yandex.ru/problem/alien-genome)
 
 **Условие задачи:**
 Геном жителей системы Тау Кита содержит 26 видов оснований, для обозначения которых будем использовать буквы латинского алфавита от A до Z. Важную роль в геноме играют пары соседних оснований. Степенью близости одного генома другому геному называется количество пар соседних оснований первого генома, которые встречаются во втором геноме. Определите степень близости первого генома второму геному.
@@ -877,7 +877,7 @@ print(similarity)
 
 
 
-# 58. [OpenCalculator](https://coderun.yandex.ru/problem/open-calculator)
+### 58. [OpenCalculator](https://coderun.yandex.ru/problem/open-calculator)
 
 **Условие задачи:**
 В новой программе OpenCalculator появилась новая возможность – можно настроить, какие кнопки отображаются. Петя настроил калькулятор так, что он отображает только кнопки с цифрами x, y, z. Определите, сможет ли Петя ввести число N, а если нет, то какое минимальное количество кнопок надо дополнительно отобразить на экране для его ввода.
@@ -905,7 +905,7 @@ print(missingDigits.count)
 
 ---
 
-# 60. [Кубики](https://coderun.yandex.ru/problem/cubes)
+### 60. [Кубики](https://coderun.yandex.ru/problem/cubes)
 
 **Условие задачи:**
 Аня и Боря любят играть в разноцветные кубики. У каждого из них свой набор, и в каждом наборе все кубики различны по цвету. Номер любого цвета — это целое число в пределах от 0 до 10⁹. Определите:
@@ -963,7 +963,7 @@ if !onlyBorisColors.isEmpty {
 ---
 
 
-# 61. [Пересечение множеств](https://coderun.yandex.ru/problem/intersection-sets)
+### 61. [Пересечение множеств](https://coderun.yandex.ru/problem/intersection-sets)
 
 **Условие задачи:**
 Даны два списка чисел, которые могут содержать до 10000 чисел каждый. Выведите все числа, которые входят как в первый, так и во второй список в порядке возрастания.
@@ -989,7 +989,7 @@ print(intersection.map { String($0) }.joined(separator: " "))
 ---
 
 
-# 62. [Количество различных чисел](https://coderun.yandex.ru/problem/number-different-numbers)
+### 62. [Количество различных чисел](https://coderun.yandex.ru/problem/number-different-numbers)
 
 **Условие задачи:**
 Дан список чисел, который может содержать до 100000 чисел. Определите, сколько в нём встречается различных чисел.
@@ -1011,7 +1011,7 @@ print(uniqueNumbers.count)
 
 ---
 
-# 64. [Сапёр](https://coderun.yandex.ru/problem/sapper)
+### 64. [Сапёр](https://coderun.yandex.ru/problem/sapper)
 
 **Условие задачи:**
 Вам необходимо построить поле для игры «Сапер» по его конфигурации — размерам и координатам расставленных на нём мин. Поле состоит из клеток с минами и пустых клеток. Клетки с миной обозначаются символом `*`. Пустые клетки содержат число `k_{i,j}`, `0 ≤ k_{i,j} ≤ 8` — количество мин на соседних клетках. Соседними клетками являются восемь клеток, имеющих смежный угол или сторону.
@@ -1076,7 +1076,7 @@ for i in 0..<n {
 ---
 
 
-# 69. [Больше своих соседей](https://coderun.yandex.ru/problem/more-your-neighbors)
+### 69. [Больше своих соседей](https://coderun.yandex.ru/problem/more-your-neighbors)
 
 **Условие задачи:**
 Дан список чисел. Определите, сколько в этом списке элементов, которые больше двух своих соседей. Выведите количество таких элементов.
@@ -1103,7 +1103,7 @@ print(count)
 ```
 
 
-# 70. [Ближайшее число](https://coderun.yandex.ru/problem/nearest-number)
+### 70. [Ближайшее число](https://coderun.yandex.ru/problem/nearest-number)
 
 **Условие задачи:**
 Напишите программу, которая находит в массиве элемент, самый близкий по величине к данному числу.
@@ -1139,7 +1139,7 @@ print(closest)
 
 ---
 
-# 71. [Определить вид последовательности](https://coderun.yandex.ru/problem/determine-type-sequence)
+### 71. [Определить вид последовательности](https://coderun.yandex.ru/problem/determine-type-sequence)
 
 
 **Условие задачи:**
@@ -1208,7 +1208,7 @@ if numbers.count <= 1 {
 
 ---
 
-# 72. [Возрастает ли список?](https://coderun.yandex.ru/problem/list-growing)
+### 72. [Возрастает ли список?](https://coderun.yandex.ru/problem/list-growing)
 
 
 
@@ -1245,7 +1245,7 @@ if isIncreasing {
 ---
 
 
-# 74. [Узник замка Иф](https://coderun.yandex.ru/problem/castle-if)
+### 74. [Узник замка Иф](https://coderun.yandex.ru/problem/castle-if)
 
 **Условие задачи:**
 За многие годы заточения узник замка Иф проделал в стене прямоугольное отверстие размером `D × E`. Замок Иф сложен из кирпичей, размером `A × B × C`. Определите, сможет ли узник выбрасывать кирпичи в море через это отверстие, если стороны кирпича должны быть параллельны сторонам отверстия.
@@ -1283,8 +1283,8 @@ if sortedBrick[0] <= sortedHole[0] && sortedBrick[1] <= sortedHole[1] {
 ---
 
 
-# 75. [Метро](https://coderun.yandex.ru/problem/metro)
-# 80. [Телефонные номера](https://coderun.yandex.ru/problem/phone-numbers)
+### 75. [Метро](https://coderun.yandex.ru/problem/metro)
+### 80. [Телефонные номера](https://coderun.yandex.ru/problem/phone-numbers)
 
 **Условие задачи:**
 Телефонные номера в адресной книге мобильного телефона имеют один из следующих форматов: +7<код><номер>, 8<код><номер>, <номер>, где <номер> — это семь цифр, а <код> — это три цифры или три цифры в круглых скобках. Если код не указан, то считается, что он равен 495. Кроме того, в записи телефонного номера может стоять знак “-” между любыми двумя цифрами. На данный момент в адресной книге телефона Васи записано всего три телефонных номера и он хочет записать туда ещё один. Но он не может понять, не записан ли уже такой номер в телефонной книге. Помогите ему! Два телефонных номера совпадают, если у них равны коды и равны номера. Например, +7(916)0123456 и 89160123456 — это один и тот же номер.
@@ -1349,7 +1349,7 @@ for _ in 0..<3 {
 ---
 
 
-# 81. [Треугольник](https://coderun.yandex.ru/problem/triangle)
+### 81. [Треугольник](https://coderun.yandex.ru/problem/triangle)
 
 **Условие задачи:**
 Даны три натуральных числа. Возможно ли построить треугольник с такими сторонами? Если это возможно, выведите строку YES, иначе выведите строку NO. Треугольник — это три точки, не лежащие на одной прямой.
@@ -1376,7 +1376,7 @@ if sortedSides[0] + sortedSides[1] > sortedSides[2] {
 
 ---
 
-# 82. [Кондиционер](https://coderun.yandex.ru/problem/conditioner)
+### 82. [Кондиционер](https://coderun.yandex.ru/problem/conditioner)
 
 **Условие задачи:**
 В офисе, где работает программист Пётр, установили кондиционер нового типа. Этот кондиционер отличается особой простотой в управлении. У кондиционера есть всего лишь два управляемых параметра: желаемая температура и режим работы. Кондиционер может работать в четырёх режимах: «freeze» — охлаждение. В этом режиме кондиционер может только уменьшать температуру. Если температура в комнате и так не больше желаемой, то он выключается. «heat» — нагрев. В этом режиме кондиционер может только увеличивать температуру. Если температура в комнате и так не меньше желаемой, то он выключается. «auto» — автоматический режим. В этом режиме кондиционер может как увеличивать, так и уменьшать температуру в комнате до желаемой. «fan» — вентиляция. В этом режиме кондиционер осуществляет только вентиляцию воздуха и не изменяет температуру в комнате. Кондиционер достаточно мощный, поэтому при настройке на правильный режим работы он за час доводит температуру в комнате до желаемой. Требуется написать программу, которая по заданной температуре в комнате `t_room`, установленным на кондиционере желаемой температуре `t_cond` и режиму работы определяет температуру, которая установится в комнате через час.
@@ -1414,7 +1414,7 @@ print(resultTemp)
 
 ---
 
-# 83. [Клавиатура](https://coderun.yandex.ru/problem/keyboard)
+### 83. [Клавиатура](https://coderun.yandex.ru/problem/keyboard)
 
 **Условие задачи:**
 На региональном этапе Всероссийской олимпиады школьников по информатике в 2009 году предлагалась следующая задача. Всем известно, что со временем клавиатура изнашивается, и клавиши на ней начинают залипать. Конечно, некоторое время такую клавиатуру ещё можно использовать, но для нажатий клавиш приходиться использовать большую силу. При изготовлении клавиатуры изначально для каждой клавиши задается количество нажатий, которое она должна выдерживать. Если знать эти величины для используемой клавиатуры, то для определенной последовательности нажатых клавиш можно определить, какие клавиши в процессе их использования сломаются, а какие — нет. Требуется написать программу, определяющую, какие клавиши сломаются в процессе заданного варианта эксплуатации клавиатуры.
@@ -1458,7 +1458,7 @@ for i in 0..<n {
 ---
 
 
-# 84. [Пирамида](https://coderun.yandex.ru/problem/pyramid)
+### 84. [Пирамида](https://coderun.yandex.ru/problem/pyramid)
 
 **Условие задачи:**
 Для строительства двумерной пирамиды используются прямоугольные блоки, каждый из которых характеризуется шириной и высотой. Можно поставить один блок на другой, только если ширина верхнего блока строго меньше ширины нижнего (блоки нельзя поворачивать). Самым нижним в пирамиде может быть блок любой ширины. По заданному набору блоков определите, пирамиду какой наибольшей высоты можно из них построить.
@@ -1503,7 +1503,7 @@ print(maxHeight)
 
 
 
-# 86. [Банковские счета](https://coderun.yandex.ru/problem/bank-accounts)
+### 86. [Банковские счета](https://coderun.yandex.ru/problem/bank-accounts)
 
 **Условие задачи:**
 Некоторый банк хочет внедрить систему управления счетами клиентов, поддерживающую следующие операции: Пополнение счета клиента. Снятие денег со счёта. Запрос остатка средств на счёте. Перевод денег между счетами клиентов. Начисление процентов всем клиентам. Вам необходимо реализовать такую систему. Клиенты банка идентифицируются именами (уникальная строка, не содержащая пробелов). Первоначально у банка нет ни одного клиента. Как только для клиента проводится операция пополнения, снятия или перевода денег, ему заводится счёт с нулевым балансом. Все дальнейшие операции проводятся только с этим счётом. Сумма на счету может быть как положительной, так и отрицательной, при этом всегда является целым числом.
@@ -1577,7 +1577,7 @@ while let line = readLine(), !line.isEmpty {
 
 ---
 
-# 88. [Контрольная по ударениям](https://coderun.yandex.ru/problem/control-accent)
+### 88. [Контрольная по ударениям](https://coderun.yandex.ru/problem/control-accent)
 
 **Условие задачи:**
 Учительница задала Пете домашнее задание — в заданном тексте расставить ударения в словах, после чего поручила Васе проверить это домашнее задание. Вася очень плохо знаком с данной темой, поэтому он нашел словарь, в котором указано, как ставятся ударения в словах. К сожалению, в этом словаре присутствуют не все слова. Вася решил, что в словах, которых нет в словаре, он будет считать, что Петя поставил ударения правильно, если в этом слове Петей поставлено ровно одно ударение. Оказалось, что в некоторых словах ударение может быть поставлено больше, чем одним способом. Вася решил, что в этом случае если то, как Петя поставил ударение, соответствует одному из приведённых в словаре вариантов, он будет засчитывать это как правильную расстановку ударения, а если не соответствует, то как ошибку. Вам дан словарь, которым пользовался Вася и домашнее задание, сданное Петей. Ваша задача — определить количество ошибок, которое в этом задании насчитает Вася.
@@ -1637,7 +1637,7 @@ print(errorCount)
 
 ---
 
-# 91. [Сумма номеров](https://coderun.yandex.ru/problem/sum-of-numbers)
+### 91. [Сумма номеров](https://coderun.yandex.ru/problem/sum-of-numbers)
 
 **Условие задачи:**
 Вася очень любит везде искать своё счастливое число K. Каждый день он ходит в школу по улице, вдоль которой припарковано N машин. Он заинтересовался вопросом, сколько существует отрезков из подряд идущих машин таких, что сумма их номеров равна K. Помогите Васе узнать ответ на его вопрос.
@@ -1677,7 +1677,7 @@ print(count)
 
 ---
 
-# 93. [Город Че](https://coderun.yandex.ru/problem/city-of-che)
+### 93. [Город Че](https://coderun.yandex.ru/problem/city-of-che)
 
 **Условие задачи:**
 В центре города Че есть пешеходная улица - одно из самых популярных мест для прогулок жителей города. По этой улице очень приятно гулять, ведь вдоль улицы расположено n забавных памятников. Девочке Маше из города Че нравятся два мальчика из её школы, и она никак не может сделать выбор между ними. Чтобы принять окончательное решение, она решила назначить обоим мальчикам свидание в одно и то же время. Маша хочет выбрать два памятника на пешеходной улице, около которых мальчики будут её ждать. При этом она хочет выбрать такие памятники, чтобы мальчики не увидели друг друга. Маша знает, что из-за тумана мальчики увидят друг друга только в том случае, если они будут на расстоянии не более r метров. Маша заинтересовалась, а сколько способов есть выбрать два различных памятника для организации свиданий?
@@ -1724,7 +1724,7 @@ print(count)
 
 
 
-# 96. [Подстрока](https://coderun.yandex.ru/problem/substring)
+### 96. [Подстрока](https://coderun.yandex.ru/problem/substring)
 
 **Условие задачи:**
 В этой задаче Вам требуется найти максимальную по длине подстроку данной строки, такую что каждый символ встречается в ней не более k раз.
@@ -1773,7 +1773,7 @@ for right in 0..<n {
 print(maxLength, bestStart + 1) // Нумерация с 1
 ```
 
-# 99. [Двоичный поиск](https://coderun.yandex.ru/problem/binary-search)
+### 99. [Двоичный поиск](https://coderun.yandex.ru/problem/binary-search)
 
 
 **Условие задачи:**
@@ -1828,7 +1828,7 @@ for target in secondArray {
 ---
 
 
-# 100. [Приближенный двоичный поиск](https://coderun.yandex.ru/problem/bpproximate-binary-search)
+### 100. [Приближенный двоичный поиск](https://coderun.yandex.ru/problem/bpproximate-binary-search)
 
 **Условие задачи:**
 Для каждого из чисел второй последовательности найдите ближайшее к нему в первой.
@@ -1901,7 +1901,7 @@ for target in secondArray {
 
 
 
-# 101. [Дипломы](https://coderun.yandex.ru/problem/diplomas)
+### 101. [Дипломы](https://coderun.yandex.ru/problem/diplomas)
 
 
 **Условие задачи:**
@@ -1952,7 +1952,7 @@ print(left)
 
 
 
-# 103. [Расстановка ноутбуков](https://coderun.yandex.ru/problem/arrangement-laptops)
+### 103. [Расстановка ноутбуков](https://coderun.yandex.ru/problem/arrangement-laptops)
 
 **Условие задачи:**
 В школе решили на один прямоугольный стол поставить два прямоугольных ноутбука. Ноутбуки нужно поставить так, чтобы их стороны были параллельны сторонам стола. Определите, какие размеры должен иметь стол, чтобы оба ноутбука на него поместились, а площадь стола была минимальна.
@@ -1977,66 +1977,66 @@ print(minVariant.0, minVariant.1)
 
 ---
 
-# 106. [Провода](https://coderun.yandex.ru/problem/wires)
-# 108. [Медиана объединения](https://coderun.yandex.ru/problem/median-union)
-# 114. [Кассы](https://coderun.yandex.ru/problem/cash-registers)
-# 120. [Высота дерева](https://coderun.yandex.ru/problem/tree-height)
-# 121. [Глубина добавляемых элементов](https://coderun.yandex.ru/problem/depth-added-elements)
-# 124. [Вывод листьев](https://coderun.yandex.ru/problem/leaf-conclusion)
-# 125. [Вывод развилок](https://coderun.yandex.ru/problem/fork-conclusion)
-# 126. [Вывод веток](https://coderun.yandex.ru/problem/branches-conclusion)
-# 127. [АВЛ-сбалансированность](https://coderun.yandex.ru/problem/avl-balance)
-# 129. [Родословная: подсчет уровней](https://coderun.yandex.ru/problem/pedigree-counting-levels)
-# 130. [Гистограмма](https://coderun.yandex.ru/problem/histogram)
-# 132. [Коллекционер Диего](https://coderun.yandex.ru/problem/collector-diego)
-# 134. [Хорошая строка](https://coderun.yandex.ru/problem/good-line)
-# 135. [Операционные системы lite](https://coderun.yandex.ru/problem/lite-operating-systems)
-# 137. [Минимальный прямоугольник](https://coderun.yandex.ru/problem/minimum-rectangle)
-# 138. [Сумма в прямоугольнике](https://coderun.yandex.ru/problem/rectangle-sum)
-# 139. [Скучная лекция](https://coderun.yandex.ru/problem/boring-lecture)
-# 140. [Стек с защитой от ошибок](https://coderun.yandex.ru/problem/stack-protection-from-errors)
-# 141. [Правильная скобочная последовательность](https://coderun.yandex.ru/problem/correct-bracket-sequence)
-# 142. [Постфиксная запись](https://coderun.yandex.ru/problem/postfix-entry)
-# 143. [Сортировка вагонов lite](https://coderun.yandex.ru/problem/sorting-of-wagons-lite)
-# 144. [Великое Лайнландское переселение](https://coderun.yandex.ru/problem/great-lineland-migration)
-# 145. [Очередь с защитой от ошибок](https://coderun.yandex.ru/problem/queue-with-error-protection)
-# 146. [Игра в пьяницу](https://coderun.yandex.ru/problem/drunkard-game)
-# 147. [Дек с защитой от ошибок](https://coderun.yandex.ru/problem/dec-with-error-protection)
-# 148. [Хипуй](https://coderun.yandex.ru/problem/hipuy)
-# 149. [Пирамидальная сортировка](https://coderun.yandex.ru/problem/pyramid-sorting)
-# 150. [Три единицы подряд](https://coderun.yandex.ru/problem/three-blocks-row)
-# 151. [Кузнечик](https://coderun.yandex.ru/problem/grasshopper)
-# 175. [Уникальные пользователи](https://coderun.yandex.ru/problem/unique-users)
-# 220. [Нормализация показателей](https://coderun.yandex.ru/problem/normalization-of-indicators)
-# 272. [Простая подсказка](https://coderun.yandex.ru/problem/simple-suggest)
-# 290. [Игра](https://coderun.yandex.ru/problem/game)
-# 294. [Сумма различных](https://coderun.yandex.ru/problem/summ-of-the-various)
-# 302. [Восстановить матрицу](https://coderun.yandex.ru/problem/restore-the-matrix)
-# 304. [Проверка палиндрома](https://coderun.yandex.ru/problem/palindroming-check)
-# 310. [Кодирование длин серий](https://coderun.yandex.ru/problem/rle-test)
-# 374. [Оценка](https://coderun.yandex.ru/problem/mark)
-# 405. [Тетрамино](https://coderun.yandex.ru/problem/tetramino)
-# 410. [Сложить и вычесть](https://coderun.yandex.ru/problem/calc-expression)
-# 455. [Села батарейка](https://coderun.yandex.ru/problem/dead-battery)
-# 456. [Запускайте гуся](https://coderun.yandex.ru/problem/release-the-goose)
-# 458. [Восстановление отчётов](https://coderun.yandex.ru/problem/report-restoration)
-# 467. [Суеверный коллекционер](https://coderun.yandex.ru/problem/next-lucky-ticket)
-# 469. [Игра в города](https://coderun.yandex.ru/problem/city-games)
-# 470. [Чёрное и белое](https://coderun.yandex.ru/problem/black-and-white)
-# 471. [Журнал без дат](https://coderun.yandex.ru/problem/log-without-dates)
-# 475. [Баг в БД](https://coderun.yandex.ru/problem/bug-in-library)
-# 476. [Градиент](https://coderun.yandex.ru/problem/gradient)
-# 478. [Сокращение маршрута](https://coderun.yandex.ru/problem/route-reduction)
-# 543. [Классы подобия треугольников](https://coderun.yandex.ru/problem/triangle-similarity)
-# 4728. [Крош, Ежик и квадратичная игра](https://coderun.yandex.ru/problem/krosh-and-game)
-# 4729. [Крош и строка](https://coderun.yandex.ru/problem/krosh-and-string)
-# 5202. [Юля, Никита и задачи](https://coderun.yandex.ru/problem/season-tasks)
-# 5204. [Умножай и транспонируй!](https://coderun.yandex.ru/problem/matrix-operations)
-# 5205. [Ещё одна задача на теорию чисел](https://coderun.yandex.ru/problem/gcd-and-lcm)
-# 5206. [Выставление тегов](https://coderun.yandex.ru/problem/calculate-tags)
-# 5316. [Снежки](https://coderun.yandex.ru/problem/snowballs)
-# 5317. [В город на ярмарку](https://coderun.yandex.ru/problem/new-year-fair)
-# 5321. [Наряжаем ёлку](https://coderun.yandex.ru/problem/decorating-tree)
+### 106. [Провода](https://coderun.yandex.ru/problem/wires)
+### 108. [Медиана объединения](https://coderun.yandex.ru/problem/median-union)
+### 114. [Кассы](https://coderun.yandex.ru/problem/cash-registers)
+### 120. [Высота дерева](https://coderun.yandex.ru/problem/tree-height)
+### 121. [Глубина добавляемых элементов](https://coderun.yandex.ru/problem/depth-added-elements)
+### 124. [Вывод листьев](https://coderun.yandex.ru/problem/leaf-conclusion)
+### 125. [Вывод развилок](https://coderun.yandex.ru/problem/fork-conclusion)
+### 126. [Вывод веток](https://coderun.yandex.ru/problem/branches-conclusion)
+### 127. [АВЛ-сбалансированность](https://coderun.yandex.ru/problem/avl-balance)
+### 129. [Родословная: подсчет уровней](https://coderun.yandex.ru/problem/pedigree-counting-levels)
+### 130. [Гистограмма](https://coderun.yandex.ru/problem/histogram)
+### 132. [Коллекционер Диего](https://coderun.yandex.ru/problem/collector-diego)
+### 134. [Хорошая строка](https://coderun.yandex.ru/problem/good-line)
+### 135. [Операционные системы lite](https://coderun.yandex.ru/problem/lite-operating-systems)
+### 137. [Минимальный прямоугольник](https://coderun.yandex.ru/problem/minimum-rectangle)
+### 138. [Сумма в прямоугольнике](https://coderun.yandex.ru/problem/rectangle-sum)
+### 139. [Скучная лекция](https://coderun.yandex.ru/problem/boring-lecture)
+### 140. [Стек с защитой от ошибок](https://coderun.yandex.ru/problem/stack-protection-from-errors)
+### 141. [Правильная скобочная последовательность](https://coderun.yandex.ru/problem/correct-bracket-sequence)
+### 142. [Постфиксная запись](https://coderun.yandex.ru/problem/postfix-entry)
+### 143. [Сортировка вагонов lite](https://coderun.yandex.ru/problem/sorting-of-wagons-lite)
+### 144. [Великое Лайнландское переселение](https://coderun.yandex.ru/problem/great-lineland-migration)
+### 145. [Очередь с защитой от ошибок](https://coderun.yandex.ru/problem/queue-with-error-protection)
+### 146. [Игра в пьяницу](https://coderun.yandex.ru/problem/drunkard-game)
+### 147. [Дек с защитой от ошибок](https://coderun.yandex.ru/problem/dec-with-error-protection)
+### 148. [Хипуй](https://coderun.yandex.ru/problem/hipuy)
+### 149. [Пирамидальная сортировка](https://coderun.yandex.ru/problem/pyramid-sorting)
+### 150. [Три единицы подряд](https://coderun.yandex.ru/problem/three-blocks-row)
+### 151. [Кузнечик](https://coderun.yandex.ru/problem/grasshopper)
+### 175. [Уникальные пользователи](https://coderun.yandex.ru/problem/unique-users)
+### 220. [Нормализация показателей](https://coderun.yandex.ru/problem/normalization-of-indicators)
+### 272. [Простая подсказка](https://coderun.yandex.ru/problem/simple-suggest)
+### 290. [Игра](https://coderun.yandex.ru/problem/game)
+### 294. [Сумма различных](https://coderun.yandex.ru/problem/summ-of-the-various)
+### 302. [Восстановить матрицу](https://coderun.yandex.ru/problem/restore-the-matrix)
+### 304. [Проверка палиндрома](https://coderun.yandex.ru/problem/palindroming-check)
+### 310. [Кодирование длин серий](https://coderun.yandex.ru/problem/rle-test)
+### 374. [Оценка](https://coderun.yandex.ru/problem/mark)
+### 405. [Тетрамино](https://coderun.yandex.ru/problem/tetramino)
+### 410. [Сложить и вычесть](https://coderun.yandex.ru/problem/calc-expression)
+### 455. [Села батарейка](https://coderun.yandex.ru/problem/dead-battery)
+### 456. [Запускайте гуся](https://coderun.yandex.ru/problem/release-the-goose)
+### 458. [Восстановление отчётов](https://coderun.yandex.ru/problem/report-restoration)
+### 467. [Суеверный коллекционер](https://coderun.yandex.ru/problem/next-lucky-ticket)
+### 469. [Игра в города](https://coderun.yandex.ru/problem/city-games)
+### 470. [Чёрное и белое](https://coderun.yandex.ru/problem/black-and-white)
+### 471. [Журнал без дат](https://coderun.yandex.ru/problem/log-without-dates)
+### 475. [Баг в БД](https://coderun.yandex.ru/problem/bug-in-library)
+### 476. [Градиент](https://coderun.yandex.ru/problem/gradient)
+### 478. [Сокращение маршрута](https://coderun.yandex.ru/problem/route-reduction)
+### 543. [Классы подобия треугольников](https://coderun.yandex.ru/problem/triangle-similarity)
+### 4728. [Крош, Ежик и квадратичная игра](https://coderun.yandex.ru/problem/krosh-and-game)
+### 4729. [Крош и строка](https://coderun.yandex.ru/problem/krosh-and-string)
+### 5202. [Юля, Никита и задачи](https://coderun.yandex.ru/problem/season-tasks)
+### 5204. [Умножай и транспонируй!](https://coderun.yandex.ru/problem/matrix-operations)
+### 5205. [Ещё одна задача на теорию чисел](https://coderun.yandex.ru/problem/gcd-and-lcm)
+### 5206. [Выставление тегов](https://coderun.yandex.ru/problem/calculate-tags)
+### 5316. [Снежки](https://coderun.yandex.ru/problem/snowballs)
+### 5317. [В город на ярмарку](https://coderun.yandex.ru/problem/new-year-fair)
+### 5321. [Наряжаем ёлку](https://coderun.yandex.ru/problem/decorating-tree)
 
 
 
