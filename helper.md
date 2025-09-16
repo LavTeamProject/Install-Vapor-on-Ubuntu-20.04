@@ -1,9 +1,7 @@
-# Оглавление задач по программированию
-
-## Двумерные плоскости и геометрия
+#### Двумерные плоскости и геометрия
 - [356. Line Reflection](#356-line-reflection)
 
-## Массивы и подмассивы
+#### Массивы и подмассивы
 - [1493. Longest Subarray of 1's After Deleting One Element](#1493-longest-subarray-of-1s-after-deleting-one-element)
 - [228. Summary Ranges](#228-summary-ranges)
 - [443. String Compression](#443-string-compression)
@@ -27,7 +25,7 @@
 - [523. Continuous Subarray Sum](#523-continuous-subarray-sum)
 - [85. Maximal Rectangle](#85-maximal-rectangle)
 
-## Строки
+#### Строки
 - [125. Valid Palindrome](#125-valid-palindrome)
 - [161. One Edit Distance](#161-one-edit-distance)
 - [49. Group Anagrams](#49-group-anagrams)
@@ -46,7 +44,7 @@
 - [415. Add Strings](#415-add-strings)
 - [771. Jewels and Stones](#771-jewels-and-stones)
 
-## Связные списки
+#### Связные списки
 - [206. Reverse Linked List](#206-reverse-linked-list)
 - [21. Merge Two Sorted Lists](#21-merge-two-sorted-lists)
 - [23. Merge k Sorted Lists](#23-merge-k-sorted-lists)
@@ -54,7 +52,7 @@
 - [2. Add Two Numbers](#2-add-two-numbers)
 - [234. Palindrome Linked List](#234-palindrome-linked-list)
 
-## Деревья
+#### Деревья
 - [101. Symmetric Tree](#101-symmetric-tree)
 - [98. Validate Binary Search Tree](#98-validate-binary-search-tree)
 - [236. Lowest Common Ancestor of a Binary Tree](#236-lowest-common-ancestor-of-a-binary-tree)
@@ -63,32 +61,32 @@
 - [200. Number of Islands](#200-number-of-islands)
 - [1650. Lowest Common Ancestor of a Binary Tree III](#1650-lowest-common-ancestor-of-a-binary-tree-iii)
 
-## Стеки и очереди
+#### Стеки и очереди
 - [232. Implement Queue using Stacks](#232-implement-queue-using-stacks)
 - [150. Evaluate Reverse Polish Notation](#150-evaluate-reverse-polish-notation)
 - [716. Max Stack](#716-max-stack)
 - [341. Flatten Nested List Iterator](#341-flatten-nested-list-iterator)
 
-## Хэш-таблицы и множества
+#### Хэш-таблицы и множества
 - [380. Insert Delete GetRandom O(1)](#380-insert-delete-getrandom-o1)
 - [146. LRU Cache](#146-lru-cache)
 - [1. Two Sum](#1-two-sum)
 
-## Математические задачи
+#### Математические задачи
 - [470. Implement Rand10() Using Rand7()](#470-implement-rand10-using-rand7)
 - [279. Perfect Squares](#279-perfect-squares)
 - [4. Median of Two Sorted Arrays](#4-median-of-two-sorted-arrays)
 
-## Проектирование систем
+#### Проектирование систем
 - [933. Number of Recent Calls](#933-number-of-recent-calls)
 - [362. Design Hit Counter](#362-design-hit-counter)
 - [281. Zigzag Iterator](#281-zigzag-iterator)
 
-## Прочие задачи
+#### Прочие задачи
 - [22. Generate Parentheses](#22-generate-parentheses)
 - [42. Trapping Rain Water](#42-trapping-rain-water)
 
-## 356. Line Reflection
+#### 356. Line Reflection
 
 **Условие задачи:**  
 Дано n точек на двумерной плоскости, определите, существует ли такая прямая, параллельная оси y, что отражение заданных точек относительно этой прямой даст те же точки.
@@ -122,7 +120,7 @@ func isReflected(_ points: [[Int]]) -> Bool {
 ```
 
 
-## 1493. Longest Subarray of 1's After Deleting One Element
+#### 1493. Longest Subarray of 1's After Deleting One Element
 
 **Условие задачи:**  
 Дан двоичный массив `nums`, нужно удалить один элемент из него.  
@@ -161,7 +159,7 @@ func longestSubarray(_ nums: [Int]) -> Int {
 ```
 
 
-## 228. Summary Ranges
+#### 228. Summary Ranges
 
 **Условие задачи:**  
 Дан отсортированный массив уникальных целых чисел `nums`.  
@@ -209,7 +207,7 @@ func summaryRanges(_ nums: [Int]) -> [String] {
 ```
 
 
-## 443. String Compression
+#### 443. String Compression
 
 **Условие задачи:**  
 Дан массив символов `chars`, сожмите его по следующему алгоритму:  
@@ -272,7 +270,7 @@ func compress(_ chars: inout [Character]) -> Int {
 
 ---
 
-## 281. Zigzag Iterator
+#### 281. Zigzag Iterator
 
 **Условие задачи:**  
 Даны два массива целых чисел `v1` и `v2`. Реализуйте итератор, который возвращает элементы этих массивов поочерёдно.
@@ -319,7 +317,7 @@ class ZigzagIterator {
 }
 ```
 
-## 125. Valid Palindrome
+#### 125. Valid Palindrome
 
 **Условие задачи:**  
 Фраза является палиндромом, если после преобразования всех заглавных букв в строчные и удаления всех неалфавитно-цифровых символов, она читается одинаково слева направо и справа налево. Алфавитно-цифровые символы — это буквы и цифры.
@@ -364,7 +362,7 @@ func isPalindrome(_ s: String) -> Bool {
 
 ---
 
-## 161. One Edit Distance
+#### 161. One Edit Distance
 
 **Условие задачи:**  
 Даны две строки `s` и `t`. Определите, находятся ли они на расстоянии редактирования в одну операцию.
@@ -425,7 +423,7 @@ func isOneEditDistance(_ s: String, _ t: String) -> Bool {
 
 ---
 
-## 560. Subarray Sum Equals K
+#### 560. Subarray Sum Equals K
 
 **Условие задачи:**  
 Дан массив целых чисел `nums` и целое число `k`. Верните общее количество подмассивов, сумма элементов которых равна `k`.
@@ -461,7 +459,7 @@ func subarraySum(_ nums: [Int], _ k: Int) -> Int {
 
 ---
 
-## 283. Move Zeroes
+#### 283. Move Zeroes
 
 **Условие задачи:**  
 Дан массив целых чисел `nums`. Переместите все нули в конец массива, сохраняя относительный порядок ненулевых элементов.
@@ -495,7 +493,7 @@ func moveZeroes(_ nums: inout [Int]) {
 ```
 
 
-## 49. Group Anagrams
+#### 49. Group Anagrams
 
 **Условие задачи:**  
 Дан массив строк `strs`. Сгруппируйте анаграммы вместе.  
@@ -526,7 +524,7 @@ func groupAnagrams(_ strs: [String]) -> [[String]] {
 
 ---
 
-## 380. Insert Delete GetRandom O(1)
+#### 380. Insert Delete GetRandom O(1)
 
 **Условие задачи:**  
 Реализуйте класс `RandomizedSet`, который поддерживает следующие операции со средней временной сложностью O(1):
@@ -586,7 +584,7 @@ class RandomizedSet {
 
 ---
 
-## 146. LRU Cache
+#### 146. LRU Cache
 
 **Условие задачи:**  
 Спроектируйте структуру данных, которая соответствует ограничениям кэша Least Recently Used (LRU).
@@ -677,7 +675,7 @@ class LRUCache {
 
 
 
-## 22. Generate Parentheses
+#### 22. Generate Parentheses
 
 **Условие задачи:**  
 Дано `n` пар скобок, напишите функцию для генерации всех возможных комбинаций корректно сформированных скобок.
@@ -715,7 +713,7 @@ func generateParenthesis(_ n: Int) -> [String] {
 
 ---
 
-## 206. Reverse Linked List
+#### 206. Reverse Linked List
 
 **Условие задачи:**  
 Дан указатель на голову односвязного списка. Переверните список и верните перевёрнутый список.
@@ -754,7 +752,7 @@ func reverseList(_ head: ListNode?) -> ListNode? {
 
 ---
 
-## 567. Permutation in String
+#### 567. Permutation in String
 
 **Условие задачи:**  
 Даны две строки `s1` и `s2`. Верните `true`, если `s2` содержит перестановку `s1`, иначе `false`.  
@@ -805,7 +803,7 @@ func checkInclusion(_ s1: String, _ s2: String) -> Bool {
 
 ---
 
-## 23. Merge k Sorted Lists
+#### 23. Merge k Sorted Lists
 
 **Условие задачи:**  
 Дан массив `k` отсортированных односвязных списков. Объедините все списки в один отсортированный список и верните его.
@@ -913,7 +911,7 @@ struct MinHeap<T: Comparable> {
 }
 ```
 
-## 933. Number of Recent Calls
+#### 933. Number of Recent Calls
 
 **Условие задачи:**  
 У вас есть класс `RecentCounter`, который подсчитывает количество запросов за определённый временной интервал.
@@ -954,7 +952,7 @@ class RecentCounter {
 
 ---
 
-## 20. Valid Parentheses
+#### 20. Valid Parentheses
 
 **Условие задачи:**  
 Дана строка `s`, содержащая только символы `'('`, `')'`, `'{'`, `'}'`, `'['` и `']'`. Определите, является ли входная строка корректной.
@@ -1000,7 +998,7 @@ func isValid(_ s: String) -> Bool {
 
 ---
 
-## 487. Max Consecutive Ones II
+#### 487. Max Consecutive Ones II
 
 **Условие задачи:**  
 Дан двоичный массив. Найдите максимальное количество последовательных единиц в этом массиве, если вы можете перевернуть не более одного нуля.
@@ -1042,7 +1040,7 @@ func findMaxConsecutiveOnes(_ nums: [Int]) -> Int {
 
 ---
 
-## 849. Maximize Distance to Closest Person
+#### 849. Maximize Distance to Closest Person
 
 **Условие задачи:**  
 Дан массив, представляющий ряд мест, где `seats[i] = 1` означает, что человек сидит на i-м месте, а `seats[i] = 0` — что i-е место свободно (индексация с 0).
@@ -1092,7 +1090,7 @@ func maxDistToClosest(_ seats: [Int]) -> Int {
 }
 ```
 
-## 362. Design Hit Counter
+#### 362. Design Hit Counter
 
 **Условие задачи:**  
 Спроектируйте счётчик запросов, который подсчитывает количество запросов, полученных за последние 5 минут.
@@ -1141,7 +1139,7 @@ class HitCounter {
 
 ---
 
-## 56. Merge Intervals
+#### 56. Merge Intervals
 
 **Условие задачи:**  
 Дан массив интервалов, где `intervals[i] = [start_i, end_i]`. Объедините все пересекающиеся интервалы и верните массив непересекающихся интервалов, которые покрывают все интервалы из входных данных.
@@ -1185,7 +1183,7 @@ func merge(_ intervals: [[Int]]) -> [[Int]] {
 
 ---
 
-## 42. Trapping Rain Water
+#### 42. Trapping Rain Water
 
 **Условие задачи:**  
 Дано n неотрицательных целых чисел, представляющих карту высот, где ширина каждого столбца равна 1. Вычислите, сколько воды она может удержать после дождя.
@@ -1229,7 +1227,7 @@ func trap(_ height: [Int]) -> Int {
 
 ---
 
-## 1. Two Sum
+#### 1. Two Sum
 
 **Условие задачи:**  
 Дан массив целых чисел `nums` и целое число `target`. Верните индексы двух чисел так, чтобы их сумма была равна `target`.
@@ -1267,7 +1265,7 @@ func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
 ```
 
 
-## 253. Meeting Rooms II
+#### 253. Meeting Rooms II
 
 **Условие задачи:**  
 Дан массив временных интервалов встреч, состоящих из времен начала и окончания `[s1,e1],[s2,e2],...` (где `si < ei`). Найдите минимальное количество конференц-залов, необходимых для проведения всех встреч.
@@ -1319,7 +1317,7 @@ func minMeetingRooms(_ intervals: [[Int]]) -> Int {
 
 ---
 
-## 438. Find All Anagrams in a String
+#### 438. Find All Anagrams in a String
 
 **Условие задачи:**  
 Даны две строки `s` и `p`. Верните массив всех начальных индексов анаграмм строки `p` в строке `s`. Вы можете вернуть ответ в любом порядке.
@@ -1384,7 +1382,7 @@ func findAnagrams(_ s: String, _ p: String) -> [Int] {
 
 ---
 
-## 470. Implement Rand10() Using Rand7()
+#### 470. Implement Rand10() Using Rand7()
 
 **Условие задачи:**  
 Дан API `rand7()`, который генерирует равномерно распределённое случайное целое число в диапазоне [1, 7]. Напишите функцию `rand10()`, которая генерирует равномерно распределённое случайное целое число в диапазоне [1, 10]. Можно использовать только `rand7()`, не используя другие API или встроенные функции случайных чисел.
@@ -1421,7 +1419,7 @@ func rand10() -> Int {
 
 ---
 
-## 101. Symmetric Tree
+#### 101. Symmetric Tree
 
 **Условие задачи:**  
 Дан корень бинарного дерева. Проверьте, является ли оно зеркальным относительно себя (то есть симметричным относительно центра).
@@ -1474,7 +1472,7 @@ private func isMirror(_ left: TreeNode?, _ right: TreeNode?) -> Bool {
 }
 ```
 
-## 3. Longest Substring Without Repeating Characters
+#### 3. Longest Substring Without Repeating Characters
 
 **Условие задачи:**  
 Данная строка `s`, найдите длину самой длинной подстроки без повторяющихся символов.
@@ -1511,7 +1509,7 @@ func lengthOfLongestSubstring(_ s: String) -> Int {
 
 ---
 
-## 98. Validate Binary Search Tree
+#### 98. Validate Binary Search Tree
 
 **Условие задачи:**  
 Дан корень бинарного дерева. Определите, является ли оно корректным бинарным деревом поиска (BST).
@@ -1561,7 +1559,7 @@ private func validate(_ node: TreeNode?, _ minVal: Int, _ maxVal: Int) -> Bool {
 
 ---
 
-## 200. Number of Islands
+#### 200. Number of Islands
 
 **Условие задачи:**  
 Дан двумерный бинарный массив `grid` размера m x n, представляющий карту, где '1' — земля, а '0' — вода. Верните количество островов.
@@ -1618,7 +1616,7 @@ func numIslands(_ grid: [[Character]]) -> Int {
 
 ---
 
-## 341. Flatten Nested List Iterator
+#### 341. Flatten Nested List Iterator
 
 **Условие задачи:**  
 Дано вложенное список целых чисел `nestedList`. Каждый элемент — либо целое число, либо список, элементы которого могут быть числами или другими списками. Реализуйте итератор для его разворачивания.
@@ -1716,7 +1714,7 @@ class NestedIterator {
 ```
 
 
-## 1446. Consecutive Characters
+#### 1446. Consecutive Characters
 
 **Условие задачи:**  
 Мощность строки — это максимальная длина непустой подстроки, содержащей только один уникальный символ.
@@ -1759,7 +1757,7 @@ func maxPower(_ s: String) -> Int {
 
 ---
 
-## 986. Interval List Intersections
+#### 986. Interval List Intersections
 
 **Условие задачи:**  
 Даны два списка замкнутых интервалов, `firstList` и `secondList`, где `firstList[i] = [start_i, end_i]` и `secondList[j] = [start_j, end_j]`. Каждый список интервалов попарно не пересекается и отсортирован.
@@ -1812,7 +1810,7 @@ func intervalIntersection(_ firstList: [[Int]], _ secondList: [[Int]]) -> [[Int]
 
 ---
 
-## 232. Implement Queue using Stacks
+#### 232. Implement Queue using Stacks
 
 **Условие задачи:**  
 Реализуйте очередь FIFO (первым пришёл — первым вышел) с использованием только двух стеков. Реализованная очередь должна поддерживать все функции обычной очереди (push, peek, pop, empty).
@@ -1873,7 +1871,7 @@ class MyQueue {
 
 ---
 
-## 2. Add Two Numbers
+#### 2. Add Two Numbers
 
 **Условие задачи:**  
 Даны два непустых односвязных списка, представляющих два неотрицательных целых числа. Цифры хранятся в обратном порядке, и каждый узел содержит одну цифру. Сложите два числа и верните сумму как односвязный список.
@@ -1928,7 +1926,7 @@ func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
 ```
 
 
-## 88. Merge Sorted Array
+#### 88. Merge Sorted Array
 
 **Условие задачи:**  
 Даны два целочисленных массива `nums1` и `nums2`, отсортированных в неубывающем порядке, и два целых числа `m` и `n`, представляющих количество элементов в `nums1` и `nums2` соответственно.
@@ -1975,7 +1973,7 @@ func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
 
 ---
 
-## 21. Merge Two Sorted Lists
+#### 21. Merge Two Sorted Lists
 
 **Условие задачи:**  
 Даны головы двух отсортированных односвязных списков `list1` и `list2`.
@@ -2020,7 +2018,7 @@ func mergeTwoLists(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
 
 ---
 
-## 1004. Max Consecutive Ones III
+#### 1004. Max Consecutive Ones III
 
 **Условие задачи:**  
 Дан двоичный массив `nums` и целое число `k`. Верните максимальное количество последовательных единиц в массиве, если вы можете перевернуть не более `k` нулей.
@@ -2062,7 +2060,7 @@ func longestOnes(_ nums: [Int], _ k: Int) -> Int {
 
 ---
 
-## 5. Longest Palindromic Substring
+#### 5. Longest Palindromic Substring
 
 **Условие задачи:**  
 Данная строка `s`, верните самую длинную палиндромную подстроку в `s`.
@@ -2115,7 +2113,7 @@ func longestPalindrome(_ s: String) -> String {
 
 
 
-## 771. Jewels and Stones
+#### 771. Jewels and Stones
 
 **Условие задачи:**  
 Даны строки `jewels`, представляющие типы камней, которые являются драгоценностями, и `stones`, представляющая камни, которые у вас есть. Каждый символ в `stones` — это тип камня, который у вас есть. Вы хотите узнать, сколько из имеющихся камней также являются драгоценностями.
@@ -2147,7 +2145,7 @@ func numJewelsInStones(_ jewels: String, _ stones: String) -> Int {
 
 ---
 
-## 236. Lowest Common Ancestor of a Binary Tree
+#### 236. Lowest Common Ancestor of a Binary Tree
 
 **Условие задачи:**  
 Дано бинарное дерево, найдите наименьшего общего предка (LCA) двух заданных узлов в дереве.
@@ -2198,7 +2196,7 @@ func lowestCommonAncestor(_ root: TreeNode?, _ p: TreeNode?, _ q: TreeNode?) -> 
 
 ---
 
-## 350. Intersection of Two Arrays II
+#### 350. Intersection of Two Arrays II
 
 **Условие задачи:**  
 Даны два целочисленных массива `nums1` и `nums2`. Верните массив их пересечения. Каждый элемент в результате должен появляться столько раз, сколько он встречается в обоих массивах. Можно вернуть результат в любом порядке.
@@ -2234,7 +2232,7 @@ func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
 
 ---
 
-## 268. Missing Number
+#### 268. Missing Number
 
 **Условие задачи:**  
 Дан массив `nums`, содержащий `n` различных чисел в диапазоне `[0, n]`. Верните единственное число в этом диапазоне, которое отсутствует в массиве.
@@ -2258,7 +2256,7 @@ func missingNumber(_ nums: [Int]) -> Int {
 
 
 
-## 150. Evaluate Reverse Polish Notation
+#### 150. Evaluate Reverse Polish Notation
 
 **Условие задачи:**  
 Дан массив строк `tokens`, представляющий арифметическое выражение в обратной польской нотации (RPN). Вычислите значение выражения и верните целое число.
@@ -2314,7 +2312,7 @@ func evalRPN(_ tokens: [String]) -> Int {
 
 ---
 
-## 4. Median of Two Sorted Arrays
+#### 4. Median of Two Sorted Arrays
 
 **Условие задачи:**  
 Даны два отсортированных массива `nums1` и `nums2` размеров `m` и `n` соответственно. Верните медиану двух отсортированных массивов.
@@ -2375,7 +2373,7 @@ func findMedianSortedArrays(_ nums1: [Int], _ nums2: [Int]) -> Double {
 
 ---
 
-## 71. Simplify Path
+#### 71. Simplify Path
 
 **Условие задачи:**  
 Дан абсолютный путь для файловой системы Unix-стиля, который всегда начинается со слэша `/`. Ваша задача — преобразовать этот абсолютный путь в упрощённый канонический путь.
@@ -2425,7 +2423,7 @@ func simplifyPath(_ path: String) -> String {
 
 ---
 
-## 392. Is Subsequence
+#### 392. Is Subsequence
 
 **Условие задачи:**  
 Даны две строки `s` и `t`. Верните `true`, если `s` является подпоследовательностью `t`, иначе `false`.
@@ -2458,7 +2456,7 @@ func isSubsequence(_ s: String, _ t: String) -> Bool {
 }
 ```
 
-## 977. Squares of a Sorted Array
+#### 977. Squares of a Sorted Array
 
 **Условие задачи:**  
 Дан целочисленный массив `nums`, отсортированный в неубывающем порядке. Верните массив квадратов каждого числа, отсортированный в неубывающем порядке.
@@ -2499,7 +2497,7 @@ func sortedSquares(_ nums: [Int]) -> [Int] {
 
 ---
 
-## 19. Remove Nth Node From End of List
+#### 19. Remove Nth Node From End of List
 
 **Условие задачи:**  
 Дано голова односвязного списка, удалите n-й узел с конца списка и верните его голову.
@@ -2548,7 +2546,7 @@ func removeNthFromEnd(_ head: ListNode?, _ n: Int) -> ListNode? {
 
 ---
 
-## 279. Perfect Squares
+#### 279. Perfect Squares
 
 **Условие задачи:**  
 Дано целое число `n`. Верните минимальное количество совершенных квадратов, сумма которых равна `n`.
@@ -2582,7 +2580,7 @@ func numSquares(_ n: Int) -> Int {
 
 ---
 
-## 716. Max Stack
+#### 716. Max Stack
 
 **Условие задачи:**  
 Спроектируйте стек максимума, который поддерживает операции:
@@ -2642,7 +2640,7 @@ class MaxStack {
 }
 ```
 
-## 1650. Lowest Common Ancestor of a Binary Tree III
+#### 1650. Lowest Common Ancestor of a Binary Tree III
 
 **Условие задачи:**  
 Даны два узла бинарного дерева `p` и `q`. Верните их наименьшего общего предка (LCA).
@@ -2711,7 +2709,7 @@ func lowestCommonAncestor(_ p: Node?, _ q: Node?) -> Node? {
 
 ---
 
-## 159. Longest Substring with At Most Two Distinct Characters
+#### 159. Longest Substring with At Most Two Distinct Characters
 
 **Условие задачи:**  
 Данная строка `s`, найдите длину самой длинной подстроки `t`, содержащей не более 2 различных символов.
@@ -2754,7 +2752,7 @@ func lengthOfLongestSubstringTwoDistinct(_ s: String) -> Int {
 
 ---
 
-## 85. Maximal Rectangle
+#### 85. Maximal Rectangle
 
 **Условие задачи:**  
 Дан двумерный бинарный массив `matrix`, заполненный нулями и единицами. Найдите наибольший прямоугольник, содержащий только единицы, и верните его площадь.
@@ -2825,7 +2823,7 @@ private func largestRectangleInHistogram(_ heights: [Int]) -> Int {
 
 ---
 
-## 33. Search in Rotated Sorted Array
+#### 33. Search in Rotated Sorted Array
 
 **Условие задачи:**  
 Дан целочисленный массив `nums`, отсортированный по возрастанию (с уникальными значениями). Перед передачей вашей функции массив `nums` может быть повернут на неизвестный индекс `k` (1 <= k < nums.length), так что результат будет `[nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]]`. Например, `[0,1,2,4,5,6,7]` может быть повернут на 3 позиции и стать `[4,5,6,7,0,1,2]`.
@@ -2876,7 +2874,7 @@ func search(_ nums: [Int], _ target: Int) -> Int {
 ```
 
 
-## 167. Two Sum II - Input Array Is Sorted
+#### 167. Two Sum II - Input Array Is Sorted
 
 **Условие задачи:**  
 Дан 1-индексированный массив целых чисел `numbers`, уже отсортированный в неубывающем порядке. Найдите два числа, которые в сумме дают заданное число `target`. Пусть эти два числа будут `numbers[index1]` и `numbers[index2]`, где `1 <= index1 < index2 <= numbers.length`.
@@ -2919,7 +2917,7 @@ func twoSum(_ numbers: [Int], _ target: Int) -> [Int] {
 
 ---
 
-## 26. Remove Duplicates from Sorted Array
+#### 26. Remove Duplicates from Sorted Array
 
 **Условие задачи:**  
 Дан целочисленный массив `nums`, отсортированный в неубывающем порядке. Удалите дубликаты *in-place* так, чтобы каждый уникальный элемент появлялся только один раз. Относительный порядок элементов должен оставаться прежним. Затем верните количество уникальных элементов в `nums`.
@@ -2954,7 +2952,7 @@ func removeDuplicates(_ nums: inout [Int]) -> Int {
 
 ---
 
-## 153. Find Minimum in Rotated Sorted Array
+#### 153. Find Minimum in Rotated Sorted Array
 
 **Условие задачи:**  
 Предположим, что массив длины `n`, отсортированный по возрастанию, был повернут от 1 до `n` раз. Например, массив `nums = [0,1,2,4,5,6,7]` может стать:
@@ -2997,7 +2995,7 @@ func findMin(_ nums: [Int]) -> Int {
 
 ---
 
-## 938. Range Sum of BST
+#### 938. Range Sum of BST
 
 **Условие задачи:**  
 Дан корень бинарного дерева поиска и два целых числа `low` и `high`. Верните сумму значений всех узлов с значением в диапазоне `[low, high]`.
@@ -3045,7 +3043,7 @@ func rangeSumBST(_ root: TreeNode?, _ low: Int, _ high: Int) -> Int {
     return sum
 }
 ```
-## 763. Partition Labels
+#### 763. Partition Labels
 
 **Условие задачи:**  
 Данная строка `s`. Мы хотим разделить строку на как можно больше частей так, чтобы каждая буква появлялась в не более чем одной части. Например, строка "abacc" может быть разделена на ["abab", "cc"], но разделения типа ["aba", "bcc"] или ["ab", "ab", "cc"] недопустимы.
@@ -3091,7 +3089,7 @@ func partitionLabels(_ s: String) -> [Int] {
 
 ---
 
-## 238. Product of Array Except Self
+#### 238. Product of Array Except Self
 
 **Условие задачи:**  
 Дан целочисленный массив `nums`, верните массив `answer` такой, что `answer[i]` равен произведению всех элементов массива `nums`, кроме `nums[i]`.
@@ -3130,7 +3128,7 @@ func productExceptSelf(_ nums: [Int]) -> [Int] {
 
 ---
 
-## 124. Binary Tree Maximum Path Sum
+#### 124. Binary Tree Maximum Path Sum
 
 **Условие задачи:**  
 Путь в бинарном дереве — это последовательность узлов, где каждая пара соседних узлов соединена ребром. Узел может появляться в последовательности не более одного раза. Обратите внимание, что путь не обязан проходить через корень.
@@ -3191,7 +3189,7 @@ private func _maxPathSum(_ node: TreeNode?) -> Int {
 
 ---
 
-## 523. Continuous Subarray Sum
+#### 523. Continuous Subarray Sum
 
 **Условие задачи:**  
 Дан целочисленный массив `nums` и целое число `k`. Верните `true`, если `nums` содержит хорошую подмассив, иначе `false`.
@@ -3235,7 +3233,7 @@ func checkSubarraySum(_ nums: [Int], _ k: Int) -> Bool {
 ```
 
 
-## 557. Reverse Words in a String III
+#### 557. Reverse Words in a String III
 
 **Условие задачи:**  
 Данная строка `s`, переверните порядок символов в каждом слове внутри предложения, сохраняя пробелы и исходный порядок слов.
@@ -3257,7 +3255,7 @@ func reverseWords(_ s: String) -> String {
 
 ---
 
-## 415. Add Strings
+#### 415. Add Strings
 
 **Условие задачи:**  
 Даны два неотрицательных целых числа, `num1` и `num2`, представленные как строки. Верните сумму `num1` и `num2` в виде строки.
@@ -3298,7 +3296,7 @@ func addStrings(_ num1: String, _ num2: String) -> String {
 
 ---
 
-## 234. Palindrome Linked List
+#### 234. Palindrome Linked List
 
 **Условие задачи:**  
 Дано начало односвязного списка, верните `true`, если он является палиндромом, иначе `false`.
@@ -3380,7 +3378,7 @@ private func reverseList(_ head: ListNode?) -> ListNode? {
 
 ---
 
-## 387. First Unique Character in a String
+#### 387. First Unique Character in a String
 
 **Условие задачи:**  
 Данная строка `s`, найдите первый неповторяющийся символ в ней и верните его индекс. Если такого нет, верните -1.
