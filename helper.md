@@ -1,3 +1,93 @@
+# Оглавление задач по программированию
+
+## Двумерные плоскости и геометрия
+- [356. Line Reflection](#356-line-reflection)
+
+## Массивы и подмассивы
+- [1493. Longest Subarray of 1's After Deleting One Element](#1493-longest-subarray-of-1s-after-deleting-one-element)
+- [228. Summary Ranges](#228-summary-ranges)
+- [443. String Compression](#443-string-compression)
+- [560. Subarray Sum Equals K](#560-subarray-sum-equals-k)
+- [283. Move Zeroes](#283-move-zeroes)
+- [88. Merge Sorted Array](#88-merge-sorted-array)
+- [238. Product of Array Except Self](#238-product-of-array-except-self)
+- [26. Remove Duplicates from Sorted Array](#26-remove-duplicates-from-sorted-array)
+- [153. Find Minimum in Rotated Sorted Array](#153-find-minimum-in-rotated-sorted-array)
+- [33. Search in Rotated Sorted Array](#33-search-in-rotated-sorted-array)
+- [167. Two Sum II - Input Array Is Sorted](#167-two-sum-ii---input-array-is-sorted)
+- [977. Squares of a Sorted Array](#977-squares-of-a-sorted-array)
+- [268. Missing Number](#268-missing-number)
+- [350. Intersection of Two Arrays II](#350-intersection-of-two-arrays-ii)
+- [487. Max Consecutive Ones II](#487-max-consecutive-ones-ii)
+- [1004. Max Consecutive Ones III](#1004-max-consecutive-ones-iii)
+- [849. Maximize Distance to Closest Person](#849-maximize-distance-to-closest-person)
+- [986. Interval List Intersections](#986-interval-list-intersections)
+- [56. Merge Intervals](#56-merge-intervals)
+- [253. Meeting Rooms II](#253-meeting-rooms-ii)
+- [523. Continuous Subarray Sum](#523-continuous-subarray-sum)
+- [85. Maximal Rectangle](#85-maximal-rectangle)
+
+## Строки
+- [125. Valid Palindrome](#125-valid-palindrome)
+- [161. One Edit Distance](#161-one-edit-distance)
+- [49. Group Anagrams](#49-group-anagrams)
+- [20. Valid Parentheses](#20-valid-parentheses)
+- [5. Longest Palindromic Substring](#5-longest-palindromic-substring)
+- [3. Longest Substring Without Repeating Characters](#3-longest-substring-without-repeating-characters)
+- [567. Permutation in String](#567-permutation-in-string)
+- [438. Find All Anagrams in a String](#438-find-all-anagrams-in-a-string)
+- [392. Is Subsequence](#392-is-subsequence)
+- [71. Simplify Path](#71-simplify-path)
+- [763. Partition Labels](#763-partition-labels)
+- [1446. Consecutive Characters](#1446-consecutive-characters)
+- [159. Longest Substring with At Most Two Distinct Characters](#159-longest-substring-with-at-most-two-distinct-characters)
+- [387. First Unique Character in a String](#387-first-unique-character-in-a-string)
+- [557. Reverse Words in a String III](#557-reverse-words-in-a-string-iii)
+- [415. Add Strings](#415-add-strings)
+- [771. Jewels and Stones](#771-jewels-and-stones)
+
+## Связные списки
+- [206. Reverse Linked List](#206-reverse-linked-list)
+- [21. Merge Two Sorted Lists](#21-merge-two-sorted-lists)
+- [23. Merge k Sorted Lists](#23-merge-k-sorted-lists)
+- [19. Remove Nth Node From End of List](#19-remove-nth-node-from-end-of-list)
+- [2. Add Two Numbers](#2-add-two-numbers)
+- [234. Palindrome Linked List](#234-palindrome-linked-list)
+
+## Деревья
+- [101. Symmetric Tree](#101-symmetric-tree)
+- [98. Validate Binary Search Tree](#98-validate-binary-search-tree)
+- [236. Lowest Common Ancestor of a Binary Tree](#236-lowest-common-ancestor-of-a-binary-tree)
+- [124. Binary Tree Maximum Path Sum](#124-binary-tree-maximum-path-sum)
+- [938. Range Sum of BST](#938-range-sum-of-bst)
+- [200. Number of Islands](#200-number-of-islands)
+- [1650. Lowest Common Ancestor of a Binary Tree III](#1650-lowest-common-ancestor-of-a-binary-tree-iii)
+
+## Стеки и очереди
+- [232. Implement Queue using Stacks](#232-implement-queue-using-stacks)
+- [150. Evaluate Reverse Polish Notation](#150-evaluate-reverse-polish-notation)
+- [716. Max Stack](#716-max-stack)
+- [341. Flatten Nested List Iterator](#341-flatten-nested-list-iterator)
+
+## Хэш-таблицы и множества
+- [380. Insert Delete GetRandom O(1)](#380-insert-delete-getrandom-o1)
+- [146. LRU Cache](#146-lru-cache)
+- [1. Two Sum](#1-two-sum)
+
+## Математические задачи
+- [470. Implement Rand10() Using Rand7()](#470-implement-rand10-using-rand7)
+- [279. Perfect Squares](#279-perfect-squares)
+- [4. Median of Two Sorted Arrays](#4-median-of-two-sorted-arrays)
+
+## Проектирование систем
+- [933. Number of Recent Calls](#933-number-of-recent-calls)
+- [362. Design Hit Counter](#362-design-hit-counter)
+- [281. Zigzag Iterator](#281-zigzag-iterator)
+
+## Прочие задачи
+- [22. Generate Parentheses](#22-generate-parentheses)
+- [42. Trapping Rain Water](#42-trapping-rain-water)
+
 ## 356. Line Reflection
 
 **Условие задачи:**  
